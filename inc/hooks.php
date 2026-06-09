@@ -37,6 +37,7 @@ require get_theme_file_path( 'inc/hooks/performance.php' );
  */
 require get_theme_file_path( 'inc/hooks/diary-meta.php' );
 add_action( 'init', __NAMESPACE__ . '\register_diary_meta' );
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_diary_meta_panel' );
 
 /**
  * Gutenberg associated hooks

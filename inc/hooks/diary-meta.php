@@ -87,3 +87,26 @@ function register_diary_meta() {
     ] );
   }
 }
+
+/**
+ * Enqueue the diary metadata sidebar panel, diary edit screen only.
+ */
+function enqueue_diary_meta_panel() {
+  $screen = get_current_screen();
+  if ( ! $screen || 'diary' !== $screen->post_type ) {
+    return;
+  }
+
+  $rel = '/js/diary-meta-panel.js';
+  wp_enqueue_script(
+    'rollemaa-diary-meta',
+    get_theme_file_uri( $rel ),
+    [ 'wp-plugins', 'wp-editor', 'wp-components', 'wp-element', 'wp-data', 'wp-core-data', 'wp-i18n' ],
+    filemtime( get_theme_file_path( $rel ) ),
+    true
+  );
+
+  wp_localize_script( 'rollemaa-diary-meta', 'rollemaaDiaryMeta', [
+    'choices' => diary_meta_choices(),
+  ] );
+}
