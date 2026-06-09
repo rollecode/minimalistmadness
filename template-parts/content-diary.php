@@ -16,20 +16,26 @@
 
 namespace Air_Light;
 
-// Fields
-$location = get_field( 'location' );
-$habits = get_field( 'habits' );
-$habits_percent = get_field( 'habits_percent' );
-$highlight = get_field( 'highlight' );
-$np = get_field( 'np' );
-$np_link = get_field( 'np_link' );
-$temperature = get_field( 'temperature' );
-$weather_text = get_field( 'weather_text' );
-$weather_icon = get_field( 'weather_icon' );
-$device = get_field( 'device' );
-$drink_icon = get_field( 'drink_icon' );
-$drink_text = get_field( 'drink_text' );
-$mood = get_field( 'mood' );
+// Fields (core post meta, formerly ACF)
+$diary_id = get_the_ID();
+$location = get_post_meta( $diary_id, 'location', true );
+$habits = get_post_meta( $diary_id, 'habits', true );
+$habits_percent = get_post_meta( $diary_id, 'habits_percent', true );
+$highlight = get_post_meta( $diary_id, 'highlight', true );
+$np = get_post_meta( $diary_id, 'np', true );
+$np_link = get_post_meta( $diary_id, 'np_link', true );
+$temperature = get_post_meta( $diary_id, 'temperature', true );
+$weather_text = get_post_meta( $diary_id, 'weather_text', true );
+$weather_icon = get_post_meta( $diary_id, 'weather_icon', true );
+$drink_icon = get_post_meta( $diary_id, 'drink_icon', true );
+$drink_text = get_post_meta( $diary_id, 'drink_text', true );
+
+// mood and device were ACF array-return fields; rebuild value + label so the
+// rest of this template ($mood['value'], $mood['label']) is unchanged.
+$device_value = get_post_meta( $diary_id, 'device', true );
+$device = $device_value ? [ 'value' => $device_value, 'label' => diary_meta_label( 'device', $device_value ) ] : '';
+$mood_value = get_post_meta( $diary_id, 'mood', true );
+$mood = $mood_value ? [ 'value' => $mood_value, 'label' => diary_meta_label( 'mood', $mood_value ) ] : '';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -62,7 +68,7 @@ $mood = get_field( 'mood' );
         $post_object = get_post( $post_id );
         $content = $post_object->post_content;
         $word_count = post_word_count( $content );
-        $gratitude = get_field( 'gratitude' );
+        $gratitude = get_post_meta( $diary_id, 'gratitude', true );
       ?>
         <p class="word-count">Tässä kirjoituksessa on <?php echo esc_html( $word_count ); ?> <?php echo ( $word_count === 1 ) ? 'sana' : 'sanaa'; ?>. Blogi on osa <a style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;" href="https://jointhefediverse.net/?lang=fi">Fediversumia</a>, voit tykätä ja kommentoida seuraamalla blogia <a style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;" href="https://joinmastodon.org/fi">Mastodonissa</a>.</p>
       <?php endif; ?>
@@ -100,7 +106,7 @@ $mood = get_field( 'mood' );
         // Habits
         if ( $habits_percent ) {
           $habits_completion_percent = $habits_percent;
-        } elseif ( $habits ) {
+        } elseif ( is_array( $habits ) && count( $habits ) ) {
           $habits_checked = count( $habits );
           $habits_total = 10;
           $habits_completion_percent = ( $habits_checked / $habits_total ) * 100;
@@ -119,7 +125,7 @@ $mood = get_field( 'mood' );
 
         // Mood
         $total = 100;
-        $mood_scale = get_field( 'mood_scale' );
+        $mood_scale = get_post_meta( $diary_id, 'mood_scale', true );
 
         if ( $mood_scale >= 0 && $mood_scale <= 40 ) {
           $mood_class = 'bad';
@@ -131,7 +137,7 @@ $mood = get_field( 'mood' );
 
         // Productivity
         $total = 100;
-        $productivity_scale = get_field( 'productivity_scale' );
+        $productivity_scale = get_post_meta( $diary_id, 'productivity_scale', true );
 
         if ( $productivity_scale >= 0 && $productivity_scale <= 40 ) {
           $productivity_class = 'bad';
@@ -142,7 +148,7 @@ $mood = get_field( 'mood' );
         }
 
         // Energy
-        $energy_scale = get_field( 'energy_scale' );
+        $energy_scale = get_post_meta( $diary_id, 'energy_scale', true );
 
         if ( $energy_scale >= 0 && $energy_scale <= 40 ) {
           $energy_class = 'bad';
@@ -153,7 +159,7 @@ $mood = get_field( 'mood' );
         }
 
         // Anxiety
-        $anxiety_scale = get_field( 'anxiety_scale' );
+        $anxiety_scale = get_post_meta( $diary_id, 'anxiety_scale', true );
 
         if ( $anxiety_scale >= 0 && $anxiety_scale <= 40 ) {
           $anxiety_class = 'good';

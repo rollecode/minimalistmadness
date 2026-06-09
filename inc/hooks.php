@@ -33,6 +33,12 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_theme_scripts' );
 require get_theme_file_path( 'inc/hooks/performance.php' );
 
 /**
+ * Diary metadata (core-native replacement for ACF)
+ */
+require get_theme_file_path( 'inc/hooks/diary-meta.php' );
+add_action( 'init', __NAMESPACE__ . '\register_diary_meta' );
+
+/**
  * Gutenberg associated hooks
  */
 require get_theme_file_path( 'inc/hooks/gutenberg.php' );

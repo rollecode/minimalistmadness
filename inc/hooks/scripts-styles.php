@@ -121,8 +121,9 @@ function heatmap_data() {
 function paged_query_for_swup() {
   global $post;
 
-  // Query for SWUP for each page
-  $selected_posts = get_field( 'selected_posts', 'option', false, false );
+  // Posts to exclude from the front-page feed (formerly an ACF options field,
+  // now a plain option; empty by default).
+  $selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
   $args = array(
     'post_type' => 'post',
     'posts_per_page' => 6, // NB! When you change this, change also posts_per_page option
