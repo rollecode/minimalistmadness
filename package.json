@@ -50,12 +50,6 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@swup/a11y-plugin": "^4.4.1",
-    "@swup/body-class-plugin": "^3.1.2",
-    "@swup/ga-plugin": "^2.0.0",
-    "@swup/preload-plugin": "^3.2.7",
-    "@swup/scripts-plugin": "^2.0.0",
-    "@swup/scroll-plugin": "^3.3.1",
     "font-awesome": "^4.7.0",
     "frappe-charts": "^1.6.2",
     "hamburgers": "^1.2.1",
@@ -66,7 +60,6 @@
     "sass-web-fonts": "^2.1.0",
     "sassboilerplate": "^0.3.0",
     "slick-carousel": "^1.8.1",
-    "swup": "^4.4.2",
     "typographic": "^3.0.0",
     "vue": "^2.6.11",
     "what-input": "^5.2.12"

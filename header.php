@@ -20,7 +20,7 @@ namespace Air_Light;
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <script data-swup-ignore-script data-domain="rollemaa.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
+  <script data-domain="rollemaa.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
 
   <?php wp_head(); ?>
 </head>
@@ -28,7 +28,7 @@ namespace Air_Light;
 <body <?php body_class( 'no-js' ); ?>>
 <div class="loading-animation" aria-hidden="true"><div class="ripple" aria-hidden="true"></div></div>
 
-<script data-swup-ignore-script>
+<script>
 function setTheme(themeName) {
   localStorage.setItem('theme', themeName);
   document.documentElement.className = themeName;
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( get_default_localization( 'Skip to content' ) ); ?></a>
   <?php wp_body_open(); ?>
-  <div class="site<?php if ( ! is_singular() || has_tag( 'raha' ) ) : ?> disable-google-ads<?php endif; ?>" id="swup">
+  <div class="site<?php if ( ! is_singular() || has_tag( 'raha' ) ) : ?> disable-google-ads<?php endif; ?>">
 
     <div class="rain-wrapper">
       <div class="rain front-row"></div>

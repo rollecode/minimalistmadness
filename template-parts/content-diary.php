@@ -39,7 +39,7 @@ $mood = get_field( 'mood' );
     <h2 class="prefix"><?php the_title(); ?></h2>
   <?php endif; ?>
   <p class="diary-title">
-    <?php if ( ! is_singular( 'diary' ) ) echo '<a data-swup-preload href="' . esc_url( get_the_permalink() ) . '">'; ?>
+    <?php if ( ! is_singular( 'diary' ) ) echo '<a href="' . esc_url( get_the_permalink() ) . '">'; ?>
       <time datetime="<?php the_time( 'c' ); ?>"><?php echo esc_html( ucfirst( get_the_time( 'l' ) ) ); ?>na, <?php the_time( 'j.' ) ?> <?php the_time( 'F' ) ?>ta <?php the_time( 'Y' ) ?><br><span class="time">Kello on <?php the_time( 'H:i' ) ?></span></time>
       <?php if ( ! is_singular( 'diary' ) ) echo '</a>'; ?>
   </p>

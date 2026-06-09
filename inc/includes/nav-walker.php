@@ -96,7 +96,7 @@ class Nav_Walker extends \Walker_Nav_Menu {
       foreach ( $atts as $attr => $value ) {
         if ( ! empty( $value ) ) {
           $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-          $attributes .= ' data-swup-preload ' . $attr . '="' . $value . '"';
+          $attributes .= ' ' . $attr . '="' . $value . '"';
         }
       }
 

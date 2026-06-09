@@ -42,7 +42,7 @@ $selected_posts = get_field( 'selected_posts', 'option' );
 
           <article class="entry post-card post">
             <div class="post-card-content">
-              <a data-swup-preload href="<?php echo esc_url( get_the_permalink( $selected_post->ID ) ); ?>" class="global-link" aria-hidden="true" tabindex="-1"></a>
+              <a href="<?php echo esc_url( get_the_permalink( $selected_post->ID ) ); ?>" class="global-link" aria-hidden="true" tabindex="-1"></a>
 
               <h2 class="post-card-title"><a href="<?php echo esc_url( get_the_permalink( $selected_post->ID ) ); ?>"><?php echo esc_attr( get_the_title( $selected_post->ID ) ); ?></a></h2>
 

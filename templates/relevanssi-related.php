@@ -170,7 +170,7 @@ if ( ! function_exists( 'get_image_lazyload_tag' ) ) {
 
           <article class="entry post-card post">
             <div class="post-card-content">
-              <a data-swup-preload href="<?php echo esc_url( get_permalink( $related_post_id ) ); ?>" class="global-link" aria-hidden="true" tabindex="-1"><span class="screen-reader-text"><?php echo esc_attr( get_the_title( $related_post_id ) ); ?></span></a>
+              <a href="<?php echo esc_url( get_permalink( $related_post_id ) ); ?>" class="global-link" aria-hidden="true" tabindex="-1"><span class="screen-reader-text"><?php echo esc_attr( get_the_title( $related_post_id ) ); ?></span></a>
 
             <h2 class="post-card-title"><a href="<?php echo esc_url( get_permalink( $related_post_id ) ); ?>"><?php echo esc_attr( get_the_title( $related_post_id ) ); ?></a></h2>
             <div class="post-card-image"><div class="img"><p class="post-card-details"><time datetime="<?php echo esc_attr( get_the_time( 'c' ) ); ?>"><?php echo esc_attr( get_the_time( 'j.', $related_post_id ) ); ?> <?php echo esc_attr( get_the_time( 'F', $related_post_id ) ); ?>ta <?php echo esc_attr( get_the_time( 'Y', $related_post_id ) ); ?></time></p><div class="image image-background image-background-layer"><?php if ( has_post_thumbnail( $related_post_id ) ) { native_lazyload_tag( get_post_thumbnail_id( $related_post_id, 'large' ), [ 'sizes' => [ 'big' => 'large' ] ] ); } else { native_lazyload_tag( khonsu_get_random_image_id() ); } ?></div></div></div>
