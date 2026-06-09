@@ -161,12 +161,38 @@ function enqueue_theme_scripts() {
   if ( ! is_admin() ) wp_deregister_script( 'jquery-core' );
   if ( ! is_admin() ) wp_deregister_script( 'jquery-migrate' );
 
-  // Enqueue global.css
+  // Enqueue global.css (site shell + front page + archives, every page)
   wp_enqueue_style( 'styles',
     get_theme_file_uri( get_asset_file( 'global.css' ) ),
     [],
     filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
   );
+
+  // content.css: full article body (post/page/diary single layout, comments,
+  // code highlighting, Gutenberg block content). Front page and archives show
+  // plain excerpts, so they never load it. The front page is a static page
+  // here (show_on_front=page) but front-page.php renders excerpts, not the
+  // page body, so it is excluded too.
+  if ( is_singular() && ! is_front_page() ) {
+    wp_enqueue_style( 'styles-content',
+      get_theme_file_uri( get_asset_file( 'content.css' ) ),
+      [ 'styles' ],
+      filemtime( get_theme_file_path( get_asset_file( 'content.css' ) ) )
+    );
+  }
+
+  // diary.css: the (large) diary/lokikirja view. Loaded on diary contexts and
+  // on no-results pages, where template-parts/content-none.php reuses the
+  // diary card markup.
+  $no_results = ! is_singular() && isset( $GLOBALS['wp_query'] ) && 0 === (int) $GLOBALS['wp_query']->found_posts;
+
+  if ( is_singular( 'diary' ) || is_post_type_archive( 'diary' ) || is_404() || $no_results ) {
+    wp_enqueue_style( 'styles-diary',
+      get_theme_file_uri( get_asset_file( 'diary.css' ) ),
+      [ 'styles' ],
+      filemtime( get_theme_file_path( get_asset_file( 'diary.css' ) ) )
+    );
+  }
 
   // Enqueue jquery and front-end.js
   wp_enqueue_script( 'jquery-core' );

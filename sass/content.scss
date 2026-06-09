@@ -1,0 +1,11 @@
+// content.css - loaded only on is_singular() (posts, pages, diary singles).
+// Full article body: post/page layout, comments, code highlighting and the
+// Gutenberg block content styles. The front page and archives show plain
+// excerpts (template-parts/content.php), so they never load this.
+@import 'abstracts/prelude';
+@import 'views/single';
+@import 'views/comments';
+@import 'features/prism';
+@import 'gutenberg/layout/content';
+@import 'gutenberg/blocks';
+@import 'gutenberg/formatting';

@@ -1,0 +1,22 @@
+// Shared compile context for split bundles: SCSS variables and mixins
+// needed at compile time. Runtime :root custom properties come from
+// global.css (always loaded first). Keep output here minimal.
+@import 'variables/colors';
+@import 'variables/breakpoints';
+@import 'variables/font-family';
+@import 'variables/font-sizes';
+@import 'variables/spacings';
+@import 'variables/forms';
+@import 'helpers/animations';
+@import 'helpers/general';
+@import 'helpers/grid';
+@import 'helpers/typography';
+@import 'helpers/variablefont';
+@import 'helpers/images';
+@import 'components/link';
+@import 'components/button';
+@import 'components/button-size-small';
+@import 'components/button-size-large';
+@import 'components/button-style-ghost';
+@import 'components/heading-hero';
+@import 'components/box-with-shadow';

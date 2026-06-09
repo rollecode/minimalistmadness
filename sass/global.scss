@@ -37,7 +37,6 @@
 @import 'features/view-transitions';
 @import 'features/effects';
 @import 'features/load-more';
-@import 'features/prism';
 @import 'features/pagination';
 @import 'features/dark-mode';
 @import 'features/dark-mode-footer-toggle';
@@ -59,20 +58,10 @@
 @import 'layout/overlay-search';
 @import 'layout/telegram-group';
 
-// Views
+// Views shown everywhere except full single articles.
+// Single, comments, code highlighting and Gutenberg block content moved to
+// content.css (is_singular only); the diary view moved to diary.css.
 @import 'views/front-page';
 @import 'views/page';
-@import 'views/single';
-@import 'views/comments';
 @import 'views/archive';
-@import 'views/diary';
 @import 'views/heatmap';
-
-// Gutenberg layout outside blocks
-@import 'gutenberg/layout/content';
-
-// Gutenberg blocks
-@import 'gutenberg/blocks';
-
-// Gutenberg formatting
-@import 'gutenberg/formatting';
