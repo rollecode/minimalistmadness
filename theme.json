@@ -1,0 +1,159 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "layout": {
+      "contentSize": "1300px"
+    },
+    "color": {
+      "custom": true,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "paragraph",
+          "name": "Text",
+          "color": "var(--color-paragraph)"
+        },
+        {
+          "slug": "background",
+          "name": "Background",
+          "color": "var(--color-background-default)"
+        },
+        {
+          "slug": "accent",
+          "name": "Accent",
+          "color": "var(--color-accent)"
+        },
+        {
+          "slug": "accent-hover",
+          "name": "Accent hover",
+          "color": "var(--color-accent-hover)"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "var(--color-white)"
+        },
+        {
+          "slug": "black",
+          "name": "Black",
+          "color": "var(--color-black)"
+        },
+        {
+          "slug": "red",
+          "name": "Red",
+          "color": "var(--color-red)"
+        },
+        {
+          "slug": "rain",
+          "name": "Rain blue",
+          "color": "var(--color-rain)"
+        },
+        {
+          "slug": "mood-good",
+          "name": "Mood good",
+          "color": "var(--color-mood-good)"
+        },
+        {
+          "slug": "mood-okay",
+          "name": "Mood okay",
+          "color": "var(--color-mood-okay)"
+        },
+        {
+          "slug": "mood-bad",
+          "name": "Mood bad",
+          "color": "var(--color-mood-bad)"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "fluid": false,
+      "fontFamilies": [
+        {
+          "slug": "sans",
+          "name": "Inter (sans)",
+          "fontFamily": "'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif"
+        },
+        {
+          "slug": "serif-old",
+          "name": "Charter (legacy serif)",
+          "fontFamily": "'Charter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif"
+        },
+        {
+          "slug": "monospace",
+          "name": "Monospace",
+          "fontFamily": "'SFMono', 'Menlo', 'Consolas', monospace"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "15px"
+        },
+        {
+          "slug": "default",
+          "name": "Default",
+          "size": "18px"
+        },
+        {
+          "slug": "medium",
+          "name": "Medium",
+          "size": "20px"
+        },
+        {
+          "slug": "large",
+          "name": "Large (h3)",
+          "size": "24px"
+        },
+        {
+          "slug": "x-large",
+          "name": "Extra large (h2)",
+          "size": "30px"
+        },
+        {
+          "slug": "xx-large",
+          "name": "Huge (h1)",
+          "size": "40px"
+        },
+        {
+          "slug": "hero",
+          "name": "Hero",
+          "size": "52px"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vh", "vw"],
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "Container",
+          "size": "2rem"
+        },
+        {
+          "slug": "40",
+          "name": "Text gap",
+          "size": "4rem"
+        },
+        {
+          "slug": "48",
+          "name": "Grid gap",
+          "size": "4.8rem"
+        },
+        {
+          "slug": "64",
+          "name": "Section",
+          "size": "6.4rem"
+        },
+        {
+          "slug": "80",
+          "name": "Block",
+          "size": "8rem"
+        }
+      ]
+    }
+  }
+}
