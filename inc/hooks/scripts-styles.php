@@ -13,6 +13,36 @@
 namespace Air_Light;
 
 /**
+ * Fetch a remote /wp-json/words/v1/getposts feed with transient caching.
+ *
+ * Returns an array of post records (possibly empty). Successful responses are
+ * cached for 24h; failed/non-200 responses are cached as empty arrays for 15
+ * minutes so a transiently-broken upstream does not get polled on every render.
+ */
+function fetch_external_words( $url, $cache_key ) {
+	$cached = get_transient( $cache_key );
+	if ( false !== $cached ) {
+		return is_array( $cached ) ? $cached : array();
+	}
+
+	$response = wp_remote_get( $url, array( 'timeout' => 5 ) );
+
+	if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+		set_transient( $cache_key, array(), 15 * MINUTE_IN_SECONDS );
+		return array();
+	}
+
+	$data = json_decode( wp_remote_retrieve_body( $response ), true );
+	if ( ! is_array( $data ) ) {
+		set_transient( $cache_key, array(), 15 * MINUTE_IN_SECONDS );
+		return array();
+	}
+
+	set_transient( $cache_key, $data, DAY_IN_SECONDS );
+	return $data;
+}
+
+/**
  * Heatmap stuff
  */
 function heatmap_data() {
@@ -28,59 +58,15 @@ function heatmap_data() {
 
   $heatmap_query = get_posts( $heatmap_args );
 
-  // Get words from Rollekino
-	// First check if data exists
-  $rollekino_query = get_transient( 'rollekino_query' );
-
-	if ( false === $rollekino_query ) {
-		$response = wp_remote_get( 'https://www.rollekino.fi/wp-json/words/v1/getposts' );
-
-		if ( 200 !== wp_remote_retrieve_response_code( $response ) ) {
-			return;
-		}
-
-		// Get body of the response
-		$rollekino_query = json_decode( wp_remote_retrieve_body( $response ), true );
-
-		// Put the results in a transient. Expire after 24 hours.
-		set_transient( 'rollekino_words_response', $rollekino_query, 24 * 60 * 60 );
-	}
-
-  // Get words from Dude
-	// First check if data exists
-  $dude_query = get_transient( 'dude_query' );
-
-	if ( false === $dude_query ) {
-		$response_dude = wp_remote_get( 'https://www.dude.fi/wp-json/words/v1/getposts' );
-
-		if ( 200 !== wp_remote_retrieve_response_code( $response_dude ) ) {
-			return;
-		}
-
-		// Get body of the response
-		$dude_query = json_decode( wp_remote_retrieve_body( $response_dude ), true );
-
-		// Put the results in a transient. Expire after 24 hours.
-		set_transient( 'dude_words_response', $dude_query, 24 * 60 * 60 );
-	}
-
-  // Get words from Rolle.design
-	// First check if data exists
-  $rolledesign_query = get_transient( 'rolledesign_query' );
-
-	if ( false === $rolledesign_query ) {
-		$response_rolledesign = wp_remote_get( 'https://rolle.design/wp-json/words/v1/getposts' );
-
-		if ( 200 !== wp_remote_retrieve_response_code( $response_rolledesign ) ) {
-			return;
-		}
-
-		// Get body of the response
-		$rolledesign_query = json_decode( wp_remote_retrieve_body( $response_rolledesign ), true );
-
-		// Put the results in a transient. Expire after 24 hours.
-		set_transient( 'dude_words_response', $rolledesign_query, 24 * 60 * 60 );
-	}
+  // Fetch remote /wp-json/words/v1/getposts feeds and cache them. The same
+  // transient key is used for both get_transient() and set_transient() — an
+  // earlier version used mismatched keys, which silently disabled the cache
+  // and caused every page render to re-hit the upstream endpoints (DEV-1050).
+  // Failed fetches are cached as empty arrays for a short window so a single
+  // bad upstream does not turn into a per-render polling loop.
+  $rollekino_query   = fetch_external_words( 'https://www.rollekino.fi/wp-json/words/v1/getposts', 'rollekino_words_response' );
+  $dude_query        = fetch_external_words( 'https://www.dude.fi/wp-json/words/v1/getposts', 'dude_words_response' );
+  $rolledesign_query = fetch_external_words( 'https://rolle.design/wp-json/words/v1/getposts', 'rolledesign_words_response' );
 
   if ( is_array( $heatmap_query ) && is_array( $rollekino_query ) && is_array( $dude_query ) && is_array( $rolledesign_query ) ) {
     $merged = array_merge( $heatmap_query, $rollekino_query, $dude_query, $rolledesign_query );
