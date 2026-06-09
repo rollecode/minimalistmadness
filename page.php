@@ -24,7 +24,7 @@ get_header(); ?>
 
   <section class="block block-page has-light-bg">
 
-    <div class="article-content transition-fade">
+    <div class="article-content">
 
       <h1 id="content" class="entry-header"><?php the_title(); ?></h1>
       <?php wp_reset_postdata(); the_content(); ?>

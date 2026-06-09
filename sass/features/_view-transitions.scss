@@ -1,0 +1,38 @@
+/* stylelint-disable */
+// Cross-document View Transitions: replaces swup.js page transition
+// animations with the browser-native equivalent. Browsers without
+// support (or users preferring reduced motion) get instant page loads.
+
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  // Mirror the old swup feel: outgoing page fades out quickly,
+  // incoming page fades in while sliding gently up.
+  ::view-transition-old(root) {
+    animation: view-transition-fade-out .2s ease both;
+  }
+
+  ::view-transition-new(root) {
+    animation: view-transition-slide-up .45s cubic-bezier(.075, .82, .165, 1) both;
+  }
+
+  @keyframes view-transition-fade-out {
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes view-transition-slide-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 2vh, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

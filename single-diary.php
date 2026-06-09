@@ -19,7 +19,7 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-  <main id="main" class="site-main transition-fade">
+  <main id="main" class="site-main">
 
     <p class="back-to-link">
       <a href="<?php echo esc_url( get_post_type_archive_link( 'diary' ) ); ?>">

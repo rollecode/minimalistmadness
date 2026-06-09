@@ -22,7 +22,7 @@ namespace Air_Light;
     <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span></a></p>
   </div><!-- .site-branding -->
 
-  <div class="article-title-area transition-fade">
+  <div class="article-title-area">
     <h1 itemprop="headline" id="content"><?php echo esc_attr( get_the_title() ); ?></h1>
     <p itemprop="about" class="article-description">Kirjoittanut <span rel="author"><?php echo esc_attr( get_the_author_meta( 'first_name' ) ); ?> <?php echo esc_attr( get_the_author_meta( 'last_name' ) ); ?></span> <time datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'l' ) ?>na, <?php the_time( 'j.' ) ?> <?php the_time( 'F' ) ?>ta <?php the_time( 'Y' ) ?></time>. Liittyy aiheisiin <?php the_tags( '', ', ', '.' ); ?></p>
   </div>

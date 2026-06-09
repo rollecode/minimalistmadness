@@ -20,13 +20,24 @@ namespace Air_Light;
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
+
+  <script>
+    // Apply dark/light theme before first paint to avoid a flash of the
+    // wrong theme; toggle bindings live in the inline script after <body>.
+    (function () {
+      var theme = localStorage.getItem('theme');
+      if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'theme-dark';
+      }
+      document.documentElement.className = 'theme-dark' === theme ? 'theme-dark' : 'theme-light';
+    })();
+  </script>
   <script data-domain="rollemaa.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
 
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class( 'no-js' ); ?>>
-<div class="loading-animation" aria-hidden="true"><div class="ripple" aria-hidden="true"></div></div>
 
 <script>
 function setTheme(themeName) {

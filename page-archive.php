@@ -18,7 +18,7 @@ get_header(); ?>
   <main role="main" id="main" class="site-main">
 
     <section class="block block-page">
-      <div class="transition-fade article-content">
+      <div class="article-content">
 
           <header class="entry-header">
             <h1 class="entry-title">Arkisto</h1>

@@ -28,6 +28,11 @@ require get_theme_file_path( 'inc/hooks/scripts-styles.php' );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_theme_scripts' );
 
 /**
+ * Performance associated hooks
+ */
+require get_theme_file_path( 'inc/hooks/performance.php' );
+
+/**
  * Gutenberg associated hooks
  */
 require get_theme_file_path( 'inc/hooks/gutenberg.php' );

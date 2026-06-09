@@ -19,7 +19,7 @@ get_header(); ?>
     <section class="block block-page block-not-found">
 
       <div class="container container-article">
-        <div class="transition-fade">
+        <div>
 
           <div class="container container-article article-content">
             <h1 id="content">Sivua ei löydy</h1>

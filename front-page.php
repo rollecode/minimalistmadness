@@ -17,7 +17,7 @@ namespace Air_Light;
 get_header(); ?>
 
 <div id="content" class="content-area">
-  <main role="main" id="main" class="site-main transition-fade">
+  <main role="main" id="main" class="site-main">
 
     <?php
     if ( is_paged() ) {
