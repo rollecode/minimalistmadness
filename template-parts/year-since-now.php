@@ -69,3 +69,4 @@ namespace Air_Light;
 
     </article>
   <?php endif;
+  wp_reset_postdata();
