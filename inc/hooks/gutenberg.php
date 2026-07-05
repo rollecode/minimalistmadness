@@ -28,13 +28,6 @@ function allowed_block_types( $allowed_blocks, $post ) {
     $allowed_blocks = array_merge( $allowed_blocks, THEME_SETTINGS['allowed_blocks'][ $post->post_type ] );
   }
 
-  // Add custom blocks
-  if ( isset( THEME_SETTINGS['acf_blocks'] ) ) {
-    foreach ( THEME_SETTINGS['acf_blocks'] as $custom_block ) {
-      $allowed_blocks[] = 'acf/' . $custom_block['name'];
-    }
-  }
-
   return $allowed_blocks;
 } // end allowed_block_types
 

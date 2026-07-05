@@ -97,66 +97,6 @@ add_action( 'after_setup_theme', function() {
     /**
      * Gutenberg -related settings
      */
-    // Register custom ACF Blocks
-    'acf_blocks' => [
-      [
-        'name'  => 'goals',
-        'title' => 'Päivän tavoitteet',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-      [
-        'name'  => 'memory',
-        'title' => 'Päivän paras muisto',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-      [
-        'name'  => 'trophy',
-        'title' => 'Päivän saavutukset',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-      [
-        'name'  => 'rotate-back',
-        'title' => 'Mikä olisi voinut mennä paremmin?',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-      [
-        'name'  => 'liked',
-        'title' => 'Tällä hetkellä mielekkäimmät tekemiset',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-      [
-        'name'  => 'on-hold',
-        'title' => 'Tekemiset, jotka ovat toistaiseksi vähemmällä huomiolla',
-        'post_types' => [
-          'diary',
-        ],
-      ],
-    ],
-
-    // Custom ACF block default settings
-    'acf_block_defaults' => [
-      'category'          => 'minimalistmadness',
-      'mode'              => 'auto',
-      'align'             => 'full',
-      'post_types'        => [
-        // 'page',
-      ],
-      'supports'          => [
-        'align' => false,
-      ],
-      'render_callback'   => __NAMESPACE__ . '\render_acf_block',
-    ],
-
     // Restrict to only selected blocks
     // Set the value to 'all' to allow all blocks everywhere
     'allowed_blocks' => 'all',

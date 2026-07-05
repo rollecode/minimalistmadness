@@ -7,8 +7,8 @@
 
 namespace Air_Light;
 
-// Fields
-$selected_posts = get_field( 'selected_posts', 'option' );
+// Fields (formerly an ACF option; empty by default)
+$selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
 ?>
 
 <?php if ( $selected_posts ) : ?>

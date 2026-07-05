@@ -7,7 +7,7 @@
 
 namespace Air_Light;
 
-$selected_posts = get_field( 'selected_posts', 'option', false, false );
+$selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
   $args = array(
     'post_type' => 'post',
     'posts_per_page' => 6, // NB! When you change this, change also posts_per_page option

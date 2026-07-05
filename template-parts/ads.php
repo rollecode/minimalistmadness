@@ -28,12 +28,12 @@ if ( $ad->have_posts() ) :
 while ( $ad->have_posts() ) :
 $ad->the_post();
 
-if ( 'etusivu' === get_field( 'slotti' ) ) :
-if ( strtotime( get_field( 'eraantymispaiva' ) ) > time() ) : ?>
+if ( 'etusivu' === get_post_meta( get_the_ID(), 'slotti', true ) ) :
+if ( strtotime( get_post_meta( get_the_ID(), 'eraantymispaiva', true ) ) > time() ) : ?>
 
   <div class="advertisement ad advert textad">
     <div class="ad-top ad textad">
-      <?php echo get_field( 'mainoskoodi' ); // phpcs:ignore ?>
+      <?php echo get_post_meta( get_the_ID(), 'mainoskoodi', true ); // phpcs:ignore ?>
     </div><!-- .textad -->
   </div><!-- .ad -->
 

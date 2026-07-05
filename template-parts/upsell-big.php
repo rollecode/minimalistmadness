@@ -7,8 +7,8 @@
 
 namespace Air_Light;
 
-// Fields
-$selected_posts = get_field( 'selected_posts', 'option', false, false );
+// Fields (formerly an ACF option; empty by default)
+$selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
 
 $query = new \WP_Query(array(
   'post_type' => 'post',

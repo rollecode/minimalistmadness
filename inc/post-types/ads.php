@@ -41,7 +41,7 @@ function ads() {
     'label'                 => __( 'Mainos', 'minimalistmadness' ),
     'description'           => __( 'Ad slots', 'minimalistmadness' ),
     'labels'                => $labels,
-    'supports'              => array( 'title', 'revisions', 'post-formats' ),
+    'supports'              => array( 'title', 'revisions', 'post-formats', 'custom-fields' ),
     'hierarchical'          => false,
     'public'                => false,
     'show_ui'               => true,
