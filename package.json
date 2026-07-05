@@ -5,8 +5,8 @@
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "scripts": {
     "css": "npm run css:dev && npm run css:prod",
-    "css:dev": "sass --load-path=sass --load-path=node_modules --style=expanded --no-source-map sass/global.scss:css/dev/global.css sass/front.scss:css/dev/front.css sass/content.scss:css/dev/content.css sass/diary.scss:css/dev/diary.css sass/gutenberg-editor-styles.scss:css/dev/gutenberg-editor-styles.css",
-    "css:prod": "sass --load-path=sass --load-path=node_modules --style=compressed --no-source-map sass/global.scss:css/prod/global.css sass/front.scss:css/prod/front.css sass/content.scss:css/prod/content.css sass/diary.scss:css/prod/diary.css sass/gutenberg-editor-styles.scss:css/prod/gutenberg-editor-styles.css",
+    "css:dev": "sass --load-path=sass --load-path=node_modules --style=expanded --no-source-map sass:css/dev",
+    "css:prod": "sass --load-path=sass --load-path=node_modules --style=compressed --no-source-map sass:css/prod",
     "watch": "npm run css:dev -- --watch"
   },
   "devDependencies": {

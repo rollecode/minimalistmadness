@@ -16,6 +16,15 @@
   }
 }
 
+// Base text sizing shared by body text elements (%default in
+// layout/_typography.scss) and form fields; a mixin so bundles compiled
+// without the layout partial (gravity-forms.css) can use it too.
+@mixin text-default() {
+  font-size: var(--font-size-paragraphs);
+  letter-spacing: -.003em;
+  line-height: var(--line-height-paragraphs);
+}
+
 // Responsive fonts
 @mixin responsive-font($min-font-size, $max-font-size, $min-vw: 320px, $max-vw: 1920px) {
   $u1: unit($min-vw);

@@ -1,0 +1,15 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.article-content .wp-block-cover__inner-container {
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+}
+.article-content .wp-block-cover__inner-container p {
+  color: #fff !important;
+  line-height: var(--line-height-core-heading);
+}

@@ -40,6 +40,61 @@ remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 add_filter( 'emoji_svg_url', '__return_false' );
 
 /**
+ * Just-in-time block styles. Core block styles load per block instead of as
+ * one wp-block-library bundle, and only when the block is actually rendered
+ * on the page (WP 6.8+ on-demand loading). The theme's own per-block styles
+ * (css/{dev,prod}/blocks/*.css) register the same way with 'path' set, so
+ * WordPress INLINES them into the page — each page carries only the styles
+ * for the blocks it displays. Pre-Gutenberg posts (no block markers) load
+ * content-legacy.css instead, handled in scripts-styles.php.
+ */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+add_filter( 'wp_should_load_block_assets_on_demand', '__return_true' );
+
+// Allow all our small per-block styles to inline (default budget is 20 KB)
+add_filter( 'styles_inline_size_limit', function () {
+  return 50000;
+} );
+
+add_action( 'init', function () {
+  $block_styles = [
+    'core/quote'            => [ 'core-blockquote' ],
+    'core/code'             => [ 'core-code' ],
+    'core/columns'          => [ 'core-columns' ],
+    'core/cover'            => [ 'core-cover' ],
+    'core/embed'            => [ 'core-embed' ],
+    'core/gallery'          => [ 'core-gallery' ],
+    'core/separator'        => [ 'core-separator' ],
+    'core/heading'          => [ 'core-heading' ],
+    'core/image'            => [ 'core-image' ],
+    'core/paragraph'        => [ 'core-paragraph', 'boxed' ],
+    'core/preformatted'     => [ 'core-preformatted' ],
+    'core/pullquote'        => [ 'core-pullquote' ],
+    'core/table'            => [ 'core-table' ],
+    'core/text-columns'     => [ 'core-text-columns' ],
+    'core/verse'            => [ 'core-verse' ],
+    'core/video'            => [ 'core-video' ],
+    'core/list'             => [ 'core-list', 'no-bullets' ],
+    'core/button'           => [ 'button' ],
+    'core/file'             => [ 'button-file' ],
+    'activitypub/reactions' => [ 'activitypub' ],
+  ];
+
+  foreach ( $block_styles as $block => $files ) {
+    foreach ( $files as $file ) {
+      $asset = get_asset_file( 'blocks/' . $file . '.css' );
+
+      wp_enqueue_block_style( $block, [
+        'handle' => 'mm-block-' . $file,
+        'src'    => get_theme_file_uri( $asset ),
+        'path'   => get_theme_file_path( $asset ),
+        'ver'    => filemtime( get_theme_file_path( $asset ) ),
+      ] );
+    }
+  }
+} );
+
+/**
  * Preload the two body font weights used above the fold so text paints
  * without waiting for the CSS to discover the @font-face rules.
  */

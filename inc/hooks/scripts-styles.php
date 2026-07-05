@@ -217,8 +217,24 @@ function enqueue_theme_scripts() {
     true
   );
 
+  // Element-level content styles for pre-Gutenberg posts. Block-era posts
+  // get the same rules per block, just-in-time and inlined (performance.php);
+  // legacy HTML has no block markers, so it loads the full set in one file.
+  if ( is_singular() && ! is_front_page() && ! has_blocks( get_queried_object_id() ) ) {
+    wp_enqueue_style( 'styles-content-legacy',
+      get_theme_file_uri( get_asset_file( 'content-legacy.css' ) ),
+      [ 'styles-content' ],
+      filemtime( get_theme_file_path( get_asset_file( 'content-legacy.css' ) ) )
+    );
+  }
+
   // Code highlighting only on singulars that actually contain code blocks
   if ( is_singular() && false !== strpos( (string) get_post_field( 'post_content', get_queried_object_id() ), '<pre' ) ) {
+    wp_enqueue_style( 'styles-prism',
+      get_theme_file_uri( get_asset_file( 'prism.css' ) ),
+      [ 'styles-content' ],
+      filemtime( get_theme_file_path( get_asset_file( 'prism.css' ) ) )
+    );
     wp_enqueue_script( 'prism',
       get_theme_file_uri( 'js/prism.js' ),
       [],
@@ -287,6 +303,17 @@ function enqueue_theme_scripts() {
   wp_dequeue_script( 'dmrp' );
 
 }
+
+/**
+ * Gravity Forms styles only on pages that render a form.
+ */
+add_action( 'gform_enqueue_scripts', function () {
+  wp_enqueue_style( 'styles-gravity-forms',
+    get_theme_file_uri( get_asset_file( 'gravity-forms.css' ) ),
+    [ 'styles' ],
+    filemtime( get_theme_file_path( get_asset_file( 'gravity-forms.css' ) ) )
+  );
+} );
 
 /**
  * Returns the built asset filename and path depending on

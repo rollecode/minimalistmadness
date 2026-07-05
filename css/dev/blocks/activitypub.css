@@ -1,0 +1,13 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.article-content .wp-block-activitypub-reactions .wp-block-heading {
+  display: none;
+}
+.article-content .wp-block-activitypub-reactions .reaction-group .reaction-label {
+  margin-bottom: 0;
+}

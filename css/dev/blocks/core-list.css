@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.article-content > ul.bandinfo,
+.article-content > ul:not([class]),
+.article-content > ol:not([class]),
+.article-content .wp-block-categories-list,
+.article-content .wp-block-list,
+.article-content ul.is-style-default,
+.article-content ol.is-style-default,
+.article-content ol:not([class]),
+.article-content ul:not([class]) .article-content > ul.is-style-default {
+  list-style: none;
+  padding-left: 0;
+  width: calc(100% - var(--padding-container-horizontal) * 2);
+}
+.article-content > ul.bandinfo li,
+.article-content > ul:not([class]) li,
+.article-content > ol:not([class]) li,
+.article-content .wp-block-categories-list li,
+.article-content .wp-block-list li,
+.article-content ul.is-style-default li,
+.article-content ol.is-style-default li,
+.article-content ol:not([class]) li,
+.article-content ul:not([class]) .article-content > ul.is-style-default li {
+  display: table-row;
+  padding: 0;
+}
+.article-content > ul.bandinfo li.block-editor-block-list__block,
+.article-content > ul:not([class]) li.block-editor-block-list__block,
+.article-content > ol:not([class]) li.block-editor-block-list__block,
+.article-content .wp-block-categories-list li.block-editor-block-list__block,
+.article-content .wp-block-list li.block-editor-block-list__block,
+.article-content ul.is-style-default li.block-editor-block-list__block,
+.article-content ol.is-style-default li.block-editor-block-list__block,
+.article-content ol:not([class]) li.block-editor-block-list__block,
+.article-content ul:not([class]) .article-content > ul.is-style-default li.block-editor-block-list__block {
+  align-items: baseline;
+  display: flex;
+  gap: 2px;
+}
+.article-content > ul.bandinfo li::before,
+.article-content > ul:not([class]) li::before,
+.article-content > ol:not([class]) li::before,
+.article-content .wp-block-categories-list li::before,
+.article-content .wp-block-list li::before,
+.article-content ul.is-style-default li::before,
+.article-content ol.is-style-default li::before,
+.article-content ol:not([class]) li::before,
+.article-content ul:not([class]) .article-content > ul.is-style-default li::before {
+  display: table-cell;
+}
+.article-content > ul.bandinfo li::before,
+.article-content > ul.bandinfo li::marker,
+.article-content > ul:not([class]) li::before,
+.article-content > ul:not([class]) li::marker,
+.article-content > ol:not([class]) li::before,
+.article-content > ol:not([class]) li::marker,
+.article-content .wp-block-categories-list li::before,
+.article-content .wp-block-categories-list li::marker,
+.article-content .wp-block-list li::before,
+.article-content .wp-block-list li::marker,
+.article-content ul.is-style-default li::before,
+.article-content ul.is-style-default li::marker,
+.article-content ol.is-style-default li::before,
+.article-content ol.is-style-default li::marker,
+.article-content ol:not([class]) li::before,
+.article-content ol:not([class]) li::marker,
+.article-content ul:not([class]) .article-content > ul.is-style-default li::before,
+.article-content ul:not([class]) .article-content > ul.is-style-default li::marker {
+  color: var(--color-link-text);
+}
+.article-content > ul:not([class]) li::before,
+.article-content ul.wp-block-list li::before,
+.article-content ul.is-style-default li::before,
+.article-content ul:not([class]) li::before {
+  content: "•";
+  padding-right: 0.8rem;
+}
+.article-content > ol:not([class]),
+.article-content ol.wp-block-list,
+.article-content ol.is-style-default,
+.article-content ol:not([class]) {
+  counter-reset: ol;
+}
+.article-content > ol:not([class]) li,
+.article-content ol.wp-block-list li,
+.article-content ol.is-style-default li,
+.article-content ol:not([class]) li {
+  counter-increment: ol;
+}
+.article-content > ol:not([class]) li::before,
+.article-content ol.wp-block-list li::before,
+.article-content ol.is-style-default li::before,
+.article-content ol:not([class]) li::before {
+  content: counter(ol) ".";
+  padding-right: 0.3rem;
+}

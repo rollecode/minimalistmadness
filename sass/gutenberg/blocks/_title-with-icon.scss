@@ -1,0 +1,32 @@
+// Icon + text headings used by the diary section headings (nowadays plain
+// wp:html blocks in post content, formerly ACF blocks).
+.title-with-icon {
+  align-items: center;
+  display: grid;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+  grid-gap: 1.5rem;
+  grid-template-columns: auto 1fr;
+
+  .icon {
+    align-items: center;
+    background-color: var(--color-border-light);
+    border-radius: 50%;
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    min-width: 42px;
+    width: 32px;
+  }
+
+  .sub-title {
+    color: var(--color-black);
+    opacity: .8;
+  }
+
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+}

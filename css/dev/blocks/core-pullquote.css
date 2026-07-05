@@ -1,0 +1,29 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+@media (max-width: 1000px) {
+  .article-content .wp-block-pullquote {
+    width: calc(100% - var(--padding-container-horizontal) * 2);
+  }
+}
+.article-content .wp-block-pullquote.alignwide,
+.article-content .wp-block-pullquote.alignfull {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 1000px) {
+  .article-content .wp-block-pullquote.alignwide,
+  .article-content .wp-block-pullquote.alignfull {
+    margin-left: var(--padding-container-horizontal);
+    margin-right: var(--padding-container-horizontal);
+  }
+}
+.article-content .wp-block-pullquote.alignfull {
+  margin-left: var(--padding-container-horizontal);
+  margin-right: var(--padding-container-horizontal);
+  width: calc(100% - var(--padding-container-horizontal) * 2);
+}

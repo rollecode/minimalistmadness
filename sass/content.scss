@@ -1,11 +1,12 @@
-// content.css - loaded only on is_singular() (posts, pages, diary singles).
-// Full article body: post/page layout, comments, code highlighting and the
-// Gutenberg block content styles. The front page and archives show plain
-// excerpts (template-parts/content.php), so they never load this.
+// content.css - loaded on is_singular() (posts, pages, diary singles) and
+// diary contexts. Article shell only: single view, hero, comments and the
+// content column layout/formatting. Block styles are NOT here: block-era
+// posts get them per block (wp_enqueue_block_style, inlined just-in-time)
+// and pre-Gutenberg posts load content-legacy.css instead. Code highlighting
+// lives in prism.css, enqueued only when the content has a <pre> block.
 @import 'abstracts/prelude';
+@import 'layout/hero-single';
 @import 'views/single';
 @import 'views/comments';
-@import 'features/prism';
 @import 'gutenberg/layout/content';
-@import 'gutenberg/blocks';
 @import 'gutenberg/formatting';

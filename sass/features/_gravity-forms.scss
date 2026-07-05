@@ -96,7 +96,7 @@
   input[type="week"],
   input[type="email"],
   input[type="search"] {
-    @extend %default;
+    @include text-default();
     background-color: var(--color-background-input-field);
     border-color: var(--color-border-forms);
     border-radius: var(--border-radius-input-field);
@@ -180,7 +180,7 @@
   // Form screen reader texts
   .gform_required_legend,
   .sr-only {
-    @extend %screen-reader-text;
+    @include screen-reader-text();
   }
 
   // Default required label

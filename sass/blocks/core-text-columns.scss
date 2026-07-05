@@ -1,0 +1,7 @@
+// Per-block style: registered with wp_enqueue_block_style and inlined by
+// WordPress only on pages where the block actually renders.
+@import 'abstracts/prelude';
+
+.article-content {
+  @import 'gutenberg/blocks/core-text-columns';
+}

@@ -1,0 +1,40 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.article-content pre {
+  background-color: #232830;
+  border: 1px solid #232830;
+  border-radius: 4px;
+  color: #f5f5f5;
+  display: block;
+  font-family: var(--font-monospace);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-paragraphs-blog);
+  margin-bottom: var(--margin-between-text-elements);
+  margin-top: var(--margin-between-text-elements);
+  overflow: auto;
+  padding: 15px 16px 14px;
+  position: relative;
+  white-space: pre;
+  word-wrap: break-word;
+}
+.article-content pre code {
+  background-color: transparent;
+  border-radius: 4px;
+  color: #f5f5f5;
+}
+.article-content .wp-block-code pre {
+  padding-left: var(--padding-container-horizontal);
+  padding-right: var(--padding-container-horizontal);
+}
+@media (max-width: 1000px) {
+  .article-content .wp-block-code {
+    margin-left: var(--padding-container-horizontal);
+    margin-right: var(--padding-container-horizontal);
+    width: calc(100% - var(--padding-container-horizontal) * 4);
+  }
+}

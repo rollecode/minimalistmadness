@@ -37,9 +37,7 @@ td,
 table,
 tr,
 %default {
-  font-size: var(--font-size-paragraphs);
-  letter-spacing: -.003em;
-  line-height: var(--line-height-paragraphs);
+  @include text-default();
 }
 
 ol:not([style]),
