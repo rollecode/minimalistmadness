@@ -1,0 +1,123 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.mini-avatar {
+  float: left;
+  margin-right: 10px;
+}
+.mini-avatar img {
+  border-radius: 50% !important;
+  width: 42px;
+  height: 42px;
+}
+
+.site-content .content-area .container .article .entry-stack {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.site-content .content-area .container .article .entry-stack:last-of-type {
+  border: 0;
+}
+.site-content .content-area .container .article .entry-stack h2 {
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 10px;
+}
+.site-content .content-area .container .article .entry-stack h2 a {
+  color: var(--color-black);
+}
+.site-content .content-area .container .article .entry-stack p {
+  color: var(--color-midnight-gray);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-header p,
+.site-content .content-area .container .article .entry-stack .entry-stack-header .dot-divider {
+  color: #888;
+  font-size: 13px;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-header p {
+  margin-bottom: 6px;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details p a {
+  color: var(--color-accent);
+  display: inline !important;
+  font-weight: var(--font-weight-500);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: all 0.18s ease-in-out;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details p a:focus, .site-content .content-area .container .article .entry-stack .entry-stack-details p a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-color: var(--color-accent-hover);
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details p a {
+  color: var(--color-grey-two);
+  text-decoration-color: var(--color-grey-two);
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details h2 a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details-read-more {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p {
+  color: var(--color-grey-two);
+  font-size: 14px;
+  margin: 0;
+  padding: 7px 0;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p a {
+  color: var(--color-accent);
+  display: inline !important;
+  font-weight: var(--font-weight-500);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: all 0.18s ease-in-out;
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p a:focus, .site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-color: var(--color-accent-hover);
+}
+.site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p a {
+  color: var(--color-grey-two);
+  text-decoration-color: var(--color-grey-two);
+}
+@media (max-width: 480px) {
+  .site-content .content-area .container .article .entry-stack .entry-stack-details-read-more p {
+    padding: 3px 0;
+  }
+}
+
+.notification-box {
+  border-bottom: 1px solid var(--color-foggy-mountain);
+  border-top: 1px solid var(--color-foggy-mountain);
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.notification-box h3 {
+  color: var(--color-darkgrey);
+  font-size: 22px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.notification-box p {
+  color: var(--color-darkgrey);
+  font-size: 16px;
+  margin: 0;
+}

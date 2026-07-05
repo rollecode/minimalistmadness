@@ -1,0 +1,118 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.block.block-page .entry-header {
+  display: none;
+}
+.block.block-page .container.container-archive.container-article {
+  max-width: 800px;
+  overflow: visible;
+}
+.block.block-page .container.container-archive.container-article .notification-box {
+  margin-left: 0;
+  text-align: left;
+  width: 100%;
+}
+.block.block-page .container.container-archive.container-article .content {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 840px) {
+  .block.block-page .container.container-archive.container-article {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: calc(100% - 4rem);
+  }
+}
+@media (max-width: 840px) {
+  .block.block-page .post-head.inverted.archive-all {
+    margin-left: 2rem;
+    padding-left: 0;
+  }
+}
+@media (min-width: 480px) {
+  .block.block-page {
+    min-height: 300px;
+  }
+}
+
+.template-arkisto h2 {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .template-arkisto h2 {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1600);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .template-arkisto h2 {
+    font-size: 24px;
+  }
+}
+.template-arkisto h2 {
+  color: var(--color-black-two);
+  margin-bottom: 20px;
+}
+.template-arkisto h2.title-grouped {
+  margin-bottom: 10px;
+}
+.template-arkisto h4 {
+  color: var(--color-grey);
+  font-size: 19px;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.template-arkisto p {
+  margin-top: 0;
+}
+.template-arkisto .tag-cloud {
+  margin-bottom: 60px;
+  max-width: 100%;
+}
+.template-arkisto .tag-cloud ul {
+  line-height: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.template-arkisto .tag-cloud li {
+  display: inline;
+  line-height: 1.22;
+  margin: 0;
+  padding: 0;
+}
+.template-arkisto .tag-cloud a:not(.button):not(.post-edit-link):not(.global-link) {
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--color-shark);
+  font-weight: var(--font-weight-500);
+  text-shadow: none;
+  text-transform: lowercase;
+}
+.template-arkisto .tag-cloud a:not(.button):not(.post-edit-link):not(.global-link):hover, .template-arkisto .tag-cloud a:not(.button):not(.post-edit-link):not(.global-link):focus {
+  box-shadow: none;
+  color: var(--color-accent-hover);
+  text-shadow: none;
+}
+@media (min-width: 840px) {
+  .template-arkisto .tag-cloud {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 840px) {
+  .template-arkisto .tag-cloud {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.tag-cloud a {
+  text-decoration: none !important;
+}

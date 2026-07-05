@@ -1,0 +1,41 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+.block.block-hero h1 {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .block.block-hero h1 {
+    font-size: calc(20px + 26 * (100vw - 320px) / 1600);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .block.block-hero h1 {
+    font-size: 46px;
+  }
+}
+.block.block-hero h1 {
+  color: var(--color-black);
+  margin: 0;
+}
+.block.block-hero .page-head {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 1000px;
+  padding: 13vw 0;
+  position: relative;
+  text-align: center;
+  width: 70%;
+}
+@media (max-width: 900px) {
+  .block.block-hero .page-head {
+    margin-top: 4.5rem;
+  }
+}

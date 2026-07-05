@@ -1,0 +1,357 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list, a11y/no-outline-none */
+.block-page button,
+.block-page .button,
+.block-page input[type=reset],
+.block-page input[type=submit],
+.block-page input[type=button],
+.content-area button,
+.content-area .button,
+.content-area input[type=reset],
+.content-area input[type=submit],
+.content-area input[type=button],
+.site-footer button,
+.site-footer .button,
+.site-footer input[type=reset],
+.site-footer input[type=submit],
+.site-footer input[type=button] {
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  border-radius: 50px;
+  color: var(--color-black);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.77;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+  padding: 5px 25px;
+  position: relative;
+  text-decoration: none;
+  transition: 150ms linear background;
+  width: auto;
+}
+.block-page button:hover, .block-page button:focus,
+.block-page .button:hover,
+.block-page .button:focus,
+.block-page input[type=reset]:hover,
+.block-page input[type=reset]:focus,
+.block-page input[type=submit]:hover,
+.block-page input[type=submit]:focus,
+.block-page input[type=button]:hover,
+.block-page input[type=button]:focus,
+.content-area button:hover,
+.content-area button:focus,
+.content-area .button:hover,
+.content-area .button:focus,
+.content-area input[type=reset]:hover,
+.content-area input[type=reset]:focus,
+.content-area input[type=submit]:hover,
+.content-area input[type=submit]:focus,
+.content-area input[type=button]:hover,
+.content-area input[type=button]:focus,
+.site-footer button:hover,
+.site-footer button:focus,
+.site-footer .button:hover,
+.site-footer .button:focus,
+.site-footer input[type=reset]:hover,
+.site-footer input[type=reset]:focus,
+.site-footer input[type=submit]:hover,
+.site-footer input[type=submit]:focus,
+.site-footer input[type=button]:hover,
+.site-footer input[type=button]:focus {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+}
+.block-page button.button-ghost,
+.block-page .button.button-ghost,
+.block-page input[type=reset].button-ghost,
+.block-page input[type=submit].button-ghost,
+.block-page input[type=button].button-ghost,
+.content-area button.button-ghost,
+.content-area .button.button-ghost,
+.content-area input[type=reset].button-ghost,
+.content-area input[type=submit].button-ghost,
+.content-area input[type=button].button-ghost,
+.site-footer button.button-ghost,
+.site-footer .button.button-ghost,
+.site-footer input[type=reset].button-ghost,
+.site-footer input[type=submit].button-ghost,
+.site-footer input[type=button].button-ghost {
+  background-color: transparent;
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+}
+.block-page button.button-ghost:hover, .block-page button.button-ghost:focus,
+.block-page .button.button-ghost:hover,
+.block-page .button.button-ghost:focus,
+.block-page input[type=reset].button-ghost:hover,
+.block-page input[type=reset].button-ghost:focus,
+.block-page input[type=submit].button-ghost:hover,
+.block-page input[type=submit].button-ghost:focus,
+.block-page input[type=button].button-ghost:hover,
+.block-page input[type=button].button-ghost:focus,
+.content-area button.button-ghost:hover,
+.content-area button.button-ghost:focus,
+.content-area .button.button-ghost:hover,
+.content-area .button.button-ghost:focus,
+.content-area input[type=reset].button-ghost:hover,
+.content-area input[type=reset].button-ghost:focus,
+.content-area input[type=submit].button-ghost:hover,
+.content-area input[type=submit].button-ghost:focus,
+.content-area input[type=button].button-ghost:hover,
+.content-area input[type=button].button-ghost:focus,
+.site-footer button.button-ghost:hover,
+.site-footer button.button-ghost:focus,
+.site-footer .button.button-ghost:hover,
+.site-footer .button.button-ghost:focus,
+.site-footer input[type=reset].button-ghost:hover,
+.site-footer input[type=reset].button-ghost:focus,
+.site-footer input[type=submit].button-ghost:hover,
+.site-footer input[type=submit].button-ghost:focus,
+.site-footer input[type=button].button-ghost:hover,
+.site-footer input[type=button].button-ghost:focus {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+@media (max-width: 480px) {
+  .block-page button,
+  .block-page .button,
+  .block-page input[type=reset],
+  .block-page input[type=submit],
+  .block-page input[type=button],
+  .content-area button,
+  .content-area .button,
+  .content-area input[type=reset],
+  .content-area input[type=submit],
+  .content-area input[type=button],
+  .site-footer button,
+  .site-footer .button,
+  .site-footer input[type=reset],
+  .site-footer input[type=submit],
+  .site-footer input[type=button] {
+    display: block;
+    text-align: center;
+  }
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gform_wrapper,
+.gform_header,
+.gform_footer {
+  margin: 0;
+  padding: 0;
+}
+
+.gform_body li,
+.gform_body div {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding-top: 0;
+}
+.gform_body li {
+  margin-bottom: 1rem;
+}
+.gform_body li:last-child {
+  margin-bottom: 0;
+}
+
+textarea,
+select,
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=number],
+input[type=month],
+input[type=week],
+input[type=email],
+input[type=search] {
+  font-size: var(--font-size-paragraphs);
+  letter-spacing: -0.003em;
+  line-height: var(--line-height-paragraphs);
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  font-family: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  line-height: 24px;
+  margin-bottom: 0;
+  padding: 15px 20px;
+  position: relative;
+  text-decoration: none;
+  transition: background 0.55s;
+}
+textarea::placeholder,
+select::placeholder,
+input[type=text]::placeholder,
+input[type=tel]::placeholder,
+input[type=url]::placeholder,
+input[type=password]::placeholder,
+input[type=number]::placeholder,
+input[type=month]::placeholder,
+input[type=week]::placeholder,
+input[type=email]::placeholder,
+input[type=search]::placeholder {
+  color: var(--color-darkgrey);
+  opacity: 0.4;
+}
+textarea:focus,
+select:focus,
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+input[type=month]:focus,
+input[type=week]:focus,
+input[type=email]:focus,
+input[type=search]:focus {
+  background-color: var(--color-white-two);
+  /* stylelint-disable-next-line */
+  outline: 0;
+}
+textarea:focus::placeholder,
+select:focus::placeholder,
+input[type=text]:focus::placeholder,
+input[type=tel]:focus::placeholder,
+input[type=url]:focus::placeholder,
+input[type=password]:focus::placeholder,
+input[type=number]:focus::placeholder,
+input[type=month]:focus::placeholder,
+input[type=week]:focus::placeholder,
+input[type=email]:focus::placeholder,
+input[type=search]:focus::placeholder {
+  opacity: 0.8;
+}
+
+select {
+  appearance: none;
+  background-image: url("../../svg/select.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 0;
+  max-width: 100%;
+  min-width: 0;
+  padding-right: 40px;
+  text-indent: 1px;
+  text-overflow: "";
+  transition: none;
+  width: 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+select:hover, select:focus {
+  border-color: var(--color-black-two);
+}
+
+form p {
+  margin-bottom: 20px;
+}
+form p.form-submit {
+  margin-bottom: 0;
+}
+form.search-form .search-field {
+  float: left;
+  margin-right: 5px;
+}
+form.search-form .search-submit {
+  line-height: 1;
+  padding: 19px 1.75em;
+}
+
+.comment-respond {
+  overflow: visible;
+}
+.comment-respond .comment-form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 0;
+}
+.comment-respond .comment-form p {
+  line-height: 1;
+  margin: 0;
+}
+.comment-respond .comment-form textarea,
+.comment-respond .comment-form input[type=text],
+.comment-respond .comment-form input[type=url],
+.comment-respond .comment-form input[type=email] {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.comment-respond .comment-form input[type=text],
+.comment-respond .comment-form input[type=url],
+.comment-respond .comment-form input[type=email] {
+  font-size: var(--font-size-16);
+}
+.comment-respond .hidden-by-default {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 0;
+}
+.comment-respond .comment-form-author {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.comment-respond .comment-form-author input {
+  border-width: 1px;
+  padding: 15px;
+  width: 100%;
+}
+.comment-respond .comment-form-email {
+  clear: right;
+  margin-bottom: 20px;
+  margin-right: 0;
+  margin-top: 0;
+}
+.comment-respond .comment-form-email input {
+  border-width: 1px;
+  padding: 15px;
+  width: 100%;
+}
+.comment-respond .comment-form-url {
+  grid-column: 1/-1;
+  margin-bottom: 30px;
+  margin-top: 0;
+  position: relative;
+}
+.comment-respond .comment-form-url input {
+  border-width: 1px;
+  padding: 15px;
+  width: 100%;
+}
+.comment-respond .form-submit {
+  clear: both;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.comment-respond .comment-form-comment {
+  grid-column: 1/-1;
+}
+@media (max-width: 480px) {
+  .comment-respond input {
+    width: 100%;
+  }
+}
+.comment-respond textarea {
+  width: 100%;
+}

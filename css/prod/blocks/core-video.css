@@ -1,1 +1,0 @@
-.article-content .wp-block-video video{max-width:100%;width:100%}@media(max-width: 1000px){.article-content .wp-block-video.alignwide,.article-content .wp-block-video.alignfull{width:calc(100% - var(--padding-container-horizontal)*2)}}.article-content .wp-block-video.alignfull{margin-left:0;margin-right:0;max-width:100%;padding-left:0;padding-right:0;width:100%}

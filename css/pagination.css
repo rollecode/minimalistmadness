@@ -1,0 +1,96 @@
+/* stylelint-disable a11y/no-display-none, declaration-property-unit-allowed-list */
+/**
+ * Typography helpers
+ */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable number-max-precision */
+body .site-content .custom-pagination {
+  align-items: flex-start;
+  display: flex;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-14);
+  justify-content: flex-start;
+  margin-top: 4rem !important;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+}
+body .site-content .custom-pagination span,
+body .site-content .custom-pagination a:not(.button):not(.post-edit-link) {
+  font-size: var(--font-size-14);
+}
+body .site-content .custom-pagination a:not(.button):not(.post-edit-link) {
+  border: 0;
+  box-shadow: none;
+  color: var(--color-midnight-gray);
+  font-size: var(--font-size-14);
+  margin: 0;
+  text-decoration: none;
+  transition: all 0.22s;
+}
+body .site-content .custom-pagination a:not(.button):not(.post-edit-link).current {
+  color: var(--color-white);
+}
+body .site-content .custom-pagination a:not(.button):not(.post-edit-link):hover, body .site-content .custom-pagination a:not(.button):not(.post-edit-link):focus {
+  color: var(--color-white);
+}
+
+.page-numbers {
+  align-items: center;
+  background-color: var(--color-white);
+  color: var(--color-pagination-text);
+  display: flex;
+  font-weight: var(--font-weight-medium);
+  height: 35px;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  transition: all 0.18s;
+  width: 35px;
+}
+.page-numbers:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px;
+}
+.page-numbers:first-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+}
+@media (max-width: 600px) {
+  .page-numbers {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+a.page-numbers:hover,
+a.page-numbers:focus {
+  background-color: var(--color-pagination-background-hover);
+  border-color: var(--color-pagination-border-hover);
+  color: var(--color-pagination-text-hover);
+}
+
+.page-numbers.current {
+  background-color: var(--color-pagination-background-current);
+  border-color: var(--color-pagination-border-current);
+  color: var(--color-pagination-text-current);
+}
+
+.page-numbers.next,
+.page-numbers.prev {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: auto;
+}
+@media (max-width: 600px) {
+  .page-numbers.next,
+  .page-numbers.prev {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

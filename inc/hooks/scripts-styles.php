@@ -161,12 +161,37 @@ function enqueue_theme_scripts() {
   // it, so plugin scripts that declare it as a dependency keep working,
   // and pages without such plugins load no jQuery at all.
 
-  // Enqueue global.css (site shell + front page + archives, every page)
-  wp_enqueue_style( 'styles',
-    get_theme_file_uri( get_asset_file( 'global.css' ) ),
-    [],
-    filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
-  );
+  // Site shell, split into purpose-sized files: base (reset, variables,
+  // typography, dark mode) plus one small file per shell component. The
+  // enqueue order mirrors the old single-bundle source order. View chunks
+  // below load only where their markup renders.
+  $shell = [ 'base', 'nav', 'rain', 'footer', 'forms', 'search-overlay' ];
+
+  $chunks = $shell;
+  if ( is_archive() || is_home() || is_search() ) {
+    $chunks[] = 'pagination';
+    $chunks[] = 'archive';
+  }
+  if ( is_front_page() || is_singular() ) {
+    $chunks[] = 'hero';
+    $chunks[] = 'cards'; // front page feed + Relevanssi related posts
+  }
+  if ( is_singular( 'page' ) && ! is_front_page() ) {
+    $chunks[] = 'page';
+  }
+
+  foreach ( $chunks as $chunk ) {
+    // The base chunk keeps the historical 'styles' handle: every other
+    // stylesheet in the theme declares it as its dependency.
+    $handle = 'base' === $chunk ? 'styles' : 'styles-' . $chunk;
+    $deps   = 'base' === $chunk ? [] : [ 'styles' ];
+
+    wp_enqueue_style( $handle,
+      get_theme_file_uri( get_asset_file( $chunk . '.css' ) ),
+      $deps,
+      filemtime( get_theme_file_path( get_asset_file( $chunk . '.css' ) ) )
+    );
+  }
 
   // front.css: front page blocks (feed, upsell, who, ads) and the front
   // page view. The blog index shows the same ads block.
@@ -316,18 +341,15 @@ add_action( 'gform_enqueue_scripts', function () {
 } );
 
 /**
- * Returns the built asset filename and path depending on
- * current environment.
+ * Returns the asset path for a file. Assets are plain, unbuilt files in
+ * css/ and js/ nowadays, so this only maps the extension to the directory.
  *
  * @param string $filename File name with the extension
  * @return string file and path of the asset file
  */
 function get_asset_file( $filename ) {
-
-  $env = 'development' === wp_get_environment_type() && ! isset( $_GET['load_production_builds'] ) ? 'dev' : 'prod'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-
   $filetype = pathinfo( $filename )['extension'];
 
-  return "${filetype}/${env}/${filename}";
+  return "{$filetype}/{$filename}";
 } // end get_asset_file
 
