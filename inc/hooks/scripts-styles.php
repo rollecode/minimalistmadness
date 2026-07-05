@@ -168,6 +168,16 @@ function enqueue_theme_scripts() {
     filemtime( get_theme_file_path( get_asset_file( 'global.css' ) ) )
   );
 
+  // front.css: front page blocks (feed, upsell, who, ads) and the front
+  // page view. The blog index shows the same ads block.
+  if ( is_front_page() || is_home() ) {
+    wp_enqueue_style( 'styles-front',
+      get_theme_file_uri( get_asset_file( 'front.css' ) ),
+      [ 'styles' ],
+      filemtime( get_theme_file_path( get_asset_file( 'front.css' ) ) )
+    );
+  }
+
   // Diary contexts: diary singles and archive, plus 404/no-results pages
   // where template-parts/content-none.php reuses the diary card markup.
   $no_results    = ! is_singular() && isset( $GLOBALS['wp_query'] ) && 0 === (int) $GLOBALS['wp_query']->found_posts;

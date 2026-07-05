@@ -30,7 +30,6 @@ get_header();
       <div class="container container-article" id="article-text-content">
         <article class="entry-content article-content">
 
-          <?php // get_template_part( 'template-parts/telegram-group' ); ?>
 
           <?php
           $post_year = get_the_time( 'Y' );

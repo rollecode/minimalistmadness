@@ -254,48 +254,42 @@
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: italic;
   font-weight: 400;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Medium.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.eot");
-  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff") format("woff"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff2") format("woff2"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.ttf") format("truetype"), url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.svg#Inter") format("svg");
+  src: url("../../../../../content/themes/minimalistmadness/fonts/Inter-Bold.woff2") format("woff2");
 }
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */

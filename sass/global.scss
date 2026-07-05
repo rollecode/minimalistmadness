@@ -36,7 +36,6 @@
 @import 'features/animations';
 @import 'features/view-transitions';
 @import 'features/effects';
-@import 'features/load-more';
 @import 'features/pagination';
 @import 'features/dark-mode';
 @import 'features/dark-mode-footer-toggle';
@@ -50,21 +49,13 @@
 @import 'layout/hero-single';
 @import 'layout/four-posts';
 @import 'layout/most-popular';
-@import 'layout/upsell-big';
-@import 'layout/upsells';
-@import 'layout/recent-posts';
-@import 'layout/who';
-@import 'layout/ads';
 @import 'layout/overlay-search';
-@import 'layout/telegram-group';
 
 // Views shown everywhere except full single articles.
 // Single, comments, code highlighting and Gutenberg block content moved to
 // content.css (is_singular only); the diary view moved to diary.css.
-@import 'views/front-page';
 @import 'views/page';
 @import 'views/archive';
-@import 'views/heatmap';
 
 // Global link formatting. Lives under gutenberg/ historically but styles
 // default links on every page, so it must ship in the global bundle; kept

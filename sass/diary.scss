@@ -4,3 +4,4 @@
 // is the single biggest CSS win here.
 @import 'abstracts/prelude';
 @import 'views/diary'; // imports layout/log-header itself
+@import 'views/heatmap'; // the writing heatmap renders on the diary archive

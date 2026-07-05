@@ -3422,3 +3422,100 @@ body.post-type-diary .editor-styles-wrapper .wp-block.wp-block-post-title.editor
     margin-top: 0 !important;
   }
 }
+@media (max-width: 720px) {
+  #heatmap {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 770px) {
+  #heatmap {
+    margin: 2rem 0 6rem;
+  }
+}
+
+.chart-container {
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .chart-container {
+    transform: translateX(1rem);
+  }
+}
+
+.heatmap-chart {
+  --hm-cell: 10px;
+  --hm-gap: 3px;
+  --hm-step: calc(var(--hm-cell) + var(--hm-gap));
+  color: var(--color-grey);
+  font-size: 9px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.heatmap-chart .hm {
+  background: #ebedf0;
+  border-radius: 1px;
+  height: var(--hm-cell);
+  width: var(--hm-cell);
+}
+.heatmap-chart .hm-l1 {
+  background: #c0ddf9;
+}
+.heatmap-chart .hm-l2 {
+  background: #73b3f3;
+}
+.heatmap-chart .hm-l3 {
+  background: #3886e1;
+}
+.heatmap-chart .hm-l4 {
+  background: #17459e;
+}
+
+.heatmap-inner {
+  display: flex;
+  gap: var(--hm-gap);
+}
+
+.heatmap-days {
+  display: grid;
+  gap: var(--hm-gap);
+  grid-template-rows: repeat(7, var(--hm-cell));
+  margin-top: 14px;
+}
+.heatmap-days span {
+  align-self: center;
+  line-height: 1;
+  padding-right: 4px;
+  text-align: right;
+}
+
+.heatmap-months {
+  display: grid;
+  gap: var(--hm-gap);
+  height: 14px;
+}
+.heatmap-months span {
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.heatmap-cells {
+  display: grid;
+  gap: var(--hm-gap);
+  grid-auto-columns: var(--hm-cell);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, var(--hm-cell));
+}
+
+.heatmap-legend {
+  align-items: center;
+  display: flex;
+  gap: var(--hm-gap);
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.heatmap-legend .heatmap-legend-label {
+  line-height: 1;
+  padding: 0 4px;
+}

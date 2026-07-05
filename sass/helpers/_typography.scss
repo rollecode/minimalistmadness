@@ -4,14 +4,15 @@
  */
 
 // Helper mixin for self-hosted fonts
+// woff2 only: universally supported, and the old multi-format list made
+// browsers pick the larger woff (first supported match wins)
 @mixin fontFace($family, $src, $weight: normal, $style: normal) {
   @font-face {
     font-display: swap;
     font-family: $family;
     font-style: $style;
     font-weight: $weight;
-    src: url('#{$src}.eot');
-    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'), url('#{$src}.woff2') format('woff2'), url('#{$src}.ttf') format('truetype'), url('#{$src}.svg##{$family}') format('svg');
+    src: url('#{$src}.woff2') format('woff2');
   }
 }
 
