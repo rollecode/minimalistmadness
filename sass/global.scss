@@ -65,3 +65,8 @@
 @import 'views/page';
 @import 'views/archive';
 @import 'views/heatmap';
+
+// Global link formatting. Lives under gutenberg/ historically but styles
+// default links on every page, so it must ship in the global bundle; kept
+// last to preserve the pre-split cascade position.
+@import 'gutenberg/formatting/link';

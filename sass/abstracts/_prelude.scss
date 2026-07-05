@@ -1,22 +1,24 @@
 // Shared compile context for split bundles: SCSS variables and mixins
-// needed at compile time. Runtime :root custom properties come from
-// global.css (always loaded first). Keep output here minimal.
-@import 'variables/colors';
+// needed at compile time only. This file must emit ZERO CSS output: the
+// runtime :root custom properties and base element styles come from
+// global.css, which every page loads first. Re-emitting them here would
+// place the light-mode :root values after global.css in the cascade and
+// override the .theme-dark custom property remap (equal specificity, later
+// source order wins), killing dark mode on every split-bundle page.
+$emit-base-css: false;
+
 @import 'variables/breakpoints';
 @import 'variables/font-family';
 @import 'variables/font-sizes';
 @import 'variables/spacings';
-@import 'variables/forms';
 @import 'helpers/animations';
 @import 'helpers/general';
 @import 'helpers/grid';
 @import 'helpers/typography';
 @import 'helpers/variablefont';
-@import 'helpers/images';
 @import 'components/link';
 @import 'components/button';
 @import 'components/button-size-small';
 @import 'components/button-size-large';
 @import 'components/button-style-ghost';
-@import 'components/heading-hero';
 @import 'components/box-with-shadow';

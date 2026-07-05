@@ -6,7 +6,12 @@ $body-weight: 400;
 $headings-weight: 700; // Default title weight. Usually 700 or 900 works pretty well
 
 // CSS Variables for responsive fonts
-:root {
+// The :root emission is skipped when compiled through abstracts/_prelude.scss
+// (split bundles); global.css provides these custom properties on every page.
+$emit-base-css: true !default;
+
+@if $emit-base-css {
+  :root {
   // Heading font sizes
   --font-size-hero: 52px;
   --font-size-h1: 40px;
@@ -75,5 +80,6 @@ $headings-weight: 700; // Default title weight. Usually 700 or 900 works pretty 
   // Element font sizes in tiny phones like iPhone 5S
   @media (max-width: 420px) {
     --font-size-nav-toggle-label: 13px;
+  }
   }
 }

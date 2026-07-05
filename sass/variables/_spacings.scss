@@ -9,7 +9,12 @@ $padding-accordion-content: 2.5rem;
 $padding-accordion-content-mobile: 2rem;
 
 // CSS Variables for responsive paddings and margins
-:root {
+// The :root emission is skipped when compiled through abstracts/_prelude.scss
+// (split bundles); global.css provides these custom properties on every page.
+$emit-base-css: true !default;
+
+@if $emit-base-css {
+  :root {
   // Gaps
   --grid-gap: 4.8rem;
 
@@ -53,5 +58,6 @@ $padding-accordion-content-mobile: 2rem;
   // Vars in mobile
   @media (max-width: $container-mobile) {
     --padding-container-vertical: 4rem;
+  }
   }
 }

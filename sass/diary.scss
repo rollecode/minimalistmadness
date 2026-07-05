@@ -3,5 +3,4 @@
 // The diary view is ~275 KB compiled, so keeping it off every other page
 // is the single biggest CSS win here.
 @import 'abstracts/prelude';
-@import 'layout/log-header';
-@import 'views/diary';
+@import 'views/diary'; // imports layout/log-header itself
