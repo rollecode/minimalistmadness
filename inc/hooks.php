@@ -33,6 +33,14 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_theme_scripts' );
 require get_theme_file_path( 'inc/hooks/performance.php' );
 
 /**
+ * Theme blocks and shared head/body scripts
+ */
+require get_theme_file_path( 'inc/hooks/blocks.php' );
+add_action( 'init', __NAMESPACE__ . '\register_theme_blocks' );
+add_action( 'wp_head', __NAMESPACE__ . '\print_theme_prepaint_script', 0 );
+add_action( 'wp_body_open', __NAMESPACE__ . '\print_theme_toggle_script', 1 );
+
+/**
  * Diary metadata (core-native replacement for ACF)
  */
 require get_theme_file_path( 'inc/hooks/diary-meta.php' );

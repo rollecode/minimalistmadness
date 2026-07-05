@@ -11,28 +11,8 @@
 
 namespace Air_Light;
 
-get_header(); ?>
+get_header();
 
-<div  class="content-area">
-	<main role="main" id="main" class="site-main">
+get_template_part( 'template-parts/loop-404' );
 
-    <section class="block block-page block-not-found">
-
-      <div class="container container-article">
-        <div>
-
-          <div class="container container-article article-content">
-            <h1 id="content">Sivua ei löydy</h1>
-            <p>Vaikuttaisi siltä, että sivu on siirretty tai poistettu. <a href="<?php echo esc_url( get_home_url() ); ?>">Tästä takaisin etusivulle</a>.</p>
-          </div>
-
-        </div>
-      </div>
-
-   </section><!-- .error-404 -->
-
- </div><!-- .container -->
-</main><!-- #main -->
-</div><!-- #primary -->
-
-<?php get_footer();
+get_footer();
