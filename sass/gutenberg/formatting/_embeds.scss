@@ -1,0 +1,16 @@
+// Responsive video embeds without JavaScript (replaces fitvids):
+// bare iframes in old (pre-block) content get a 16:9 box; block embeds
+// already have their own responsive wrappers.
+.entry-content,
+.article-content,
+.wp-block-embed__wrapper {
+  iframe[src*='youtube'],
+  iframe[src*='youtu.be'],
+  iframe[src*='vimeo'],
+  iframe[src*='dailymotion'] {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}

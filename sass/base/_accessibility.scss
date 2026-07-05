@@ -48,6 +48,13 @@
   }
 }
 
+// Native smooth scrolling for anchor links (replaces the old jQuery animate)
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 // Suppress focus ring on for mouse and touch users for visual reasons
 /* stylelint-disable a11y/no-outline-none */
 [data-whatinput="mouse"] *:focus,

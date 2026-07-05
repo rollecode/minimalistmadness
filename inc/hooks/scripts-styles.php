@@ -116,9 +116,9 @@ function heatmap_data() {
 }
 
 /**
- * Vue feed queries for Swup.
+ * Front page post feed query for the load-more button.
  */
-function paged_query_for_swup() {
+function front_page_paged_query() {
   global $post;
 
   // Posts to exclude from the front-page feed (formerly an ACF options field,
@@ -157,10 +157,9 @@ function paged_query_for_swup() {
  * Enqueue scripts and styles.
  */
 function enqueue_theme_scripts() {
-  // Disable jQuery (included in all.js and normally on wp-admin)
-  if ( ! is_admin() ) wp_deregister_script( 'jquery' );
-  if ( ! is_admin() ) wp_deregister_script( 'jquery-core' );
-  if ( ! is_admin() ) wp_deregister_script( 'jquery-migrate' );
+  // The theme itself no longer uses jQuery anywhere. Core still registers
+  // it, so plugin scripts that declare it as a dependency keep working,
+  // and pages without such plugins load no jQuery at all.
 
   // Enqueue global.css (site shell + front page + archives, every page)
   wp_enqueue_style( 'styles',
@@ -200,27 +199,45 @@ function enqueue_theme_scripts() {
     );
   }
 
-  // Enqueue jquery and front-end.js
-  wp_enqueue_script( 'jquery-core' );
+  // Front-end JS: vanilla and buildless, served as-is from js/front-end.js
   wp_enqueue_script( 'scripts',
-    get_theme_file_uri( get_asset_file( 'front-end.js' ) ),
+    get_theme_file_uri( 'js/front-end.js' ),
     [],
-    filemtime( get_theme_file_path( get_asset_file( 'front-end.js' ) ) ),
+    filemtime( get_theme_file_path( 'js/front-end.js' ) ),
     true
   );
+
+  // Code highlighting only on singulars that actually contain code blocks
+  if ( is_singular() && false !== strpos( (string) get_post_field( 'post_content', get_queried_object_id() ), '<pre' ) ) {
+    wp_enqueue_script( 'prism',
+      get_theme_file_uri( 'js/prism.js' ),
+      [],
+      filemtime( get_theme_file_path( 'js/prism.js' ) ),
+      true
+    );
+  }
+
+  // Writing heatmap only on the diary archive. This also keeps the heavy
+  // heatmap_data() query (380 posts + remote feeds) off every other page.
+  if ( is_post_type_archive( 'diary' ) ) {
+    wp_enqueue_script( 'heatmap',
+      get_theme_file_uri( 'js/heatmap.js' ),
+      [],
+      filemtime( get_theme_file_path( 'js/heatmap.js' ) ),
+      true
+    );
+    wp_localize_script( 'heatmap', 'heatmapdata', heatmap_data() );
+  }
 
   // Required comment-reply script
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
   }
 
-  wp_localize_script( 'scripts', 'minimalistmadness_screenReaderText', array(
-    'expand'   => esc_html__( 'Open child menu', 'minimalistmadness' ),
-    'collapse' => esc_html__( 'Close child menu', 'minimalistmadness' ),
-  ) );
-
-  wp_localize_script( 'scripts', 'heatmapdata', heatmap_data() );
-  wp_localize_script( 'scripts', 'paged_query', paged_query_for_swup() );
+  // Load-more query is only used by the front page post feed
+  if ( is_front_page() ) {
+    wp_localize_script( 'scripts', 'paged_query', front_page_paged_query() );
+  }
 
   wp_localize_script( 'scripts', 'minimalistmadness_screenReaderText', [
     'expand'          => get_default_localization( 'Open child menu' ),

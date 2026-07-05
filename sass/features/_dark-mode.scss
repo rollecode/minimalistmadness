@@ -186,13 +186,9 @@ html.wp-toolbar:root,
     background-image: url('../../svg/external-link-d0d1d2.svg') !important;
   }
 
-  // Frappe charts
-  rect[fill="#ebedf0"] {
-    fill: rgb(55 55 55 / .3);
-  }
-
-  [fill="#555b51"] {
-    fill: rgb(255 255 255 / .2);
+  // Writing heatmap: empty cells blend into the dark background
+  .heatmap-chart .hm-l0 {
+    background: rgb(55 55 55 / .3);
   }
 
   // Exceptions

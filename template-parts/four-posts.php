@@ -111,21 +111,6 @@ $selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
 
     <?php endforeach; ?>
 
-    <article class="entry post-card post no-animation item-vue" v-for="(post, index) in posts" v-bind:id="'post-' + post.id">
-      <div class="post-card-content">
-        <a v-bind:href="post.link" class="global-link" v-bind:aria-label="post.title.rendered" aria-hidden="true" tabindex="-1"></a>
-
-        <div class="post-card-image no-bottom-radius"><div class="img"><div class="post-card-details"><div v-html="post.time_custom">{{ post.time_custom }}</div><div v-html="post.reading_time_custom">{{ post.reading_time_custom }}</div></div><div class="background-image full-image" v-bind:style="{ backgroundImage: 'url(' + post.featured_image_custom + ')' }"></div></div></div>
-
-        <div class="post-card-information">
-          <h2 class="post-card-title-large"><a v-html="post.title.rendered" v-bind:href="post.link">{{ post.title.rendered }}</a></h2>
-
-          <p>{{ post.excerpt }}</p>
-        </div>
-
-      </div>
-    </article>
-
     </div>
 
     <div class="load-more-spinner" style="display: none;">
@@ -142,14 +127,7 @@ $selected_posts = (array) get_option( 'rollemaa_selected_posts', [] );
 
         <button class="button load-more">Lataa lisää</button>
 
-        <?php endif;
-          $query->query['paged'] = 1;
-        ?>
-
-      <script>
-        var posts_query_original = <?php echo json_encode( $query->query ) // phpcs:ignore ?>;
-        var posts_query = <?php echo json_encode( $query->query ) // phpcs:ignore ?>;
-      </script>
+        <?php endif; ?>
     </div>
 
   </div>
