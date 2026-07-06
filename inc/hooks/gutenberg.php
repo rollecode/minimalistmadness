@@ -67,14 +67,17 @@ function register_block_editor_assets() {
 } // end register_block_editor_assets
 
 /**
- * Minimal editor styles. The old 486KB hand-themed (and dark-on-dark)
- * editor stylesheet is gone; theme.json presets and the per-block styles
- * cover the canvas. Only the title-with-icon rules are registered here,
- * because core/html block previews render in sandboxed iframes that only
- * receive add_editor_style() styles, and the old diary headings live in
- * wp:html blocks with inline SVGs that need their size constraint.
+ * Editor styles: the canvas mirrors the site (fonts, block widths, block
+ * styles) in light mode. The stylesheet is the old editor bundle with every
+ * .theme-dark rule stripped — the hand-made dark editor theming is what
+ * caused the dark-on-dark editor. The separate title-with-icon file is
+ * registered too because core/html block previews render in sandboxed
+ * iframes whose plain body only matches unprefixed selectors.
  */
 function setup_editor_styles() {
   add_theme_support( 'editor-styles' );
-  add_editor_style( 'css/blocks/title-with-icon.css' );
+  add_editor_style( [
+    'css/gutenberg-editor-styles.css',
+    'css/blocks/title-with-icon.css',
+  ] );
 }
