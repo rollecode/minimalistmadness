@@ -64,96 +64,17 @@ function register_block_editor_assets() {
     'all'
   );
 
-  // Enqueue optional editor only styles
-  wp_enqueue_style(
-    'block-editor-styles',
-    get_theme_file_uri( get_asset_file( 'gutenberg-editor-styles.css' ) ),
-    [],
-    filemtime( get_theme_file_path( get_asset_file( 'gutenberg-editor-styles.css' ) ) ),
-    'all',
-    true
-  );
 } // end register_block_editor_assets
 
-// Remove Gutenberg inline "Normalization styles" like .editor-styles-wrapper h1
-// color: inherit;
-// @source https://github.com/WordPress/gutenberg/issues/18595#issuecomment-599588153
-// @ref https://gist.github.com/gziolo/a947dc52eb2604c77a0a5b0797b2e781#block_editor_settings_all
-function remove_gutenberg_inline_styles( $editor_settings, $editor_context ) {
-  if ( ! empty( $editor_context->post ) ) {
-    unset( $editor_settings['styles'][0]['css'] );
-  }
-
-  return $editor_settings;
-}
-
 /**
- * Make sure Gutenberg wp-admin editor styles are loaded
+ * Minimal editor styles. The old 486KB hand-themed (and dark-on-dark)
+ * editor stylesheet is gone; theme.json presets and the per-block styles
+ * cover the canvas. Only the title-with-icon rules are registered here,
+ * because core/html block previews render in sandboxed iframes that only
+ * receive add_editor_style() styles, and the old diary headings live in
+ * wp:html blocks with inline SVGs that need their size constraint.
  */
 function setup_editor_styles() {
-  // Add support for editor styles.
   add_theme_support( 'editor-styles' );
-
-  // Enqueue editor styles.
-  add_editor_style( get_theme_file_uri( get_asset_file( 'gutenberg-editor-styles.css' ) ) );
-}
-
-/**
- * Block editor title input styles for post types that don't show
- * post title in templates
- */
-function block_editor_title_input_styles() {
-  $post_types = [
-    'page',
-    'settings',
-  ];
-
-  if ( ! in_array( get_post_type(), $post_types, true ) ) {
-    return;
-  }
-  $styles = '
-  /* Remove gap between post title wrapper and first block */
-  .edit-post-visual-editor__post-title-wrapper + .is-root-container > .wp-block:first-child {
-    margin-top: 0;
-  }
-  /* Remove white border from top */
-  .interface-interface-skeleton__header {
-    border-bottom: 0;
-  }
-  .block-editor .editor-styles-wrapper {
-    padding-top: 0;
-  }
-  .block-editor .editor-styles-wrapper .edit-post-visual-editor__post-title-wrapper {
-    background-color: #23282e;
-    border-bottom: 1px solid #23282e;
-    color: #fff;
-    position: relative;
-    z-index: 3;
-  }
-  .edit-post-visual-editor__post-title-wrapper {
-    margin: 0;
-  }
-  .block-editor .editor-styles-wrapper .editor-post-title {
-    color: #fff;
-    font-size: 20px;
-    font-weight: var(--font-weight-semibold);
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  .block-editor .editor-styles-wrapper .editor-post-title::before {
-    color: rgb(255 255 255 / .5);
-    display: block;
-    font-size: 12px;
-    font-weight: var(--font-weight-500);
-    margin-bottom: 1rem;
-    position: relative;
-  }
-  body.locale-fi .editor-styles-wrapper .editor-post-title::before {
-    content: "Nimi, joka näkyy selaimen välilehdessä ja valikossa";
-  }
-  body.locale-en-us .editor-styles-wrapper .editor-post-title::before {
-    content: "Post name shown in the browser tab and menus";
-  }
-  ';
-  wp_add_inline_style( 'block-editor-styles',  $styles );
+  add_editor_style( 'css/blocks/title-with-icon.css' );
 }

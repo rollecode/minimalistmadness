@@ -77,6 +77,7 @@ add_action( 'init', function () {
     'core/list'             => [ 'core-list', 'no-bullets' ],
     'core/button'           => [ 'button' ],
     'core/file'             => [ 'button-file' ],
+    'core/html'             => [ 'title-with-icon' ],
     'activitypub/reactions' => [ 'activitypub' ],
   ];
 

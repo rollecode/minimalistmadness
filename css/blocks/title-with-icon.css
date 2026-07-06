@@ -1,0 +1,30 @@
+/* Icon + text headings used inside wp:html blocks in old diary entries
+   (formerly ACF blocks). Registered for core/html so the rules apply both
+   on the front end and inside the editor canvas. */
+.title-with-icon {
+  align-items: center;
+  display: grid;
+  font-family: var(--font-sans, inherit);
+  font-size: var(--font-size-16, 16px);
+  font-weight: var(--font-weight-medium, 500);
+  grid-gap: 1.5rem;
+  grid-template-columns: auto 1fr;
+}
+.title-with-icon .icon {
+  align-items: center;
+  background-color: var(--color-border-light, #e9e9ec);
+  border-radius: 50%;
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  min-width: 42px;
+  width: 32px;
+}
+.title-with-icon .sub-title {
+  color: var(--color-black, #141414);
+  opacity: .8;
+}
+.title-with-icon svg {
+  height: 18px;
+  width: 18px;
+}
