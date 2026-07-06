@@ -179,6 +179,11 @@ function enqueue_theme_scripts() {
   if ( is_singular( 'page' ) && ! is_front_page() ) {
     $chunks[] = 'page';
   }
+  // Slot ads render on front/blog index; front-end.js injects the own-ad
+  // on singles (#article-text-content) and the archive page (#spawn-slot).
+  if ( is_front_page() || is_home() || is_singular() ) {
+    $chunks[] = 'ads';
+  }
 
   foreach ( $chunks as $chunk ) {
     // The base chunk keeps the historical 'styles' handle: every other

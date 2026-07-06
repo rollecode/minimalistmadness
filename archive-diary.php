@@ -11,30 +11,8 @@
 
 namespace Air_Light;
 
-get_header(); ?>
+get_header();
 
-<div class="content-area">
-	<main role="main" id="main" class="site-main block block-page">
+get_template_part( 'template-parts/loop-archive-diary' );
 
-    <?php get_template_part( 'template-parts/heatmap' ); ?>
-
-    <?php if ( have_posts() ) :
-      $count = 0; ?>
-
-      <?php while ( have_posts() ) :
-        the_post();
-        get_template_part( 'template-parts/content-diary' );
-      endwhile;
-
-      khonsu_pagination();
-
-    else :
-      get_template_part( 'template-parts/content', 'none' );
-    endif; ?>
-
-    <?php dynamic_sidebar(); ?>
-
-  </main><!-- #main -->
-</div><!-- #primary -->
-
-<?php get_footer();
+get_footer();

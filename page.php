@@ -18,25 +18,8 @@
 namespace Air_Light;
 
 the_post();
-get_header(); ?>
+get_header();
 
-<main class="site-main">
+get_template_part( 'template-parts/loop-page' );
 
-  <section class="block block-page has-light-bg">
-
-    <div class="article-content">
-
-      <h1 id="content" class="entry-header"><?php the_title(); ?></h1>
-      <?php wp_reset_postdata(); the_content(); ?>
-
-      <?php if ( get_edit_post_link() ) {
-        edit_post_link( sprintf( wp_kses( __( 'Muokkaa <span class="screen-reader-text">%s</span>', 'minimalistmadness' ), [ 'span' => [ 'class' => [] ] ] ), get_the_title() ), '<p class="edit-link">', '</p>' );
-      } ?>
-
-    </div>
-
-  </section>
-
-</main>
-
-<?php get_footer();
+get_footer();
