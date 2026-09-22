@@ -67,17 +67,17 @@ function register_block_editor_assets() {
 } // end register_block_editor_assets
 
 /**
- * Editor styles: the canvas mirrors the site (fonts, block widths, block
- * styles) in light mode. The stylesheet is the old editor bundle with every
- * .theme-dark rule stripped — the hand-made dark editor theming is what
- * caused the dark-on-dark editor. The separate title-with-icon file is
- * registered too because core/html block previews render in sandboxed
- * iframes whose plain body only matches unprefixed selectors.
+ * Diary entries are narrower and set in a smaller size than articles. The
+ * editor canvas gets that from theme.json data, not from an editor stylesheet.
  */
-function setup_editor_styles() {
-  add_theme_support( 'editor-styles' );
-  add_editor_style( [
-    'css/gutenberg-editor-styles.css',
-    'css/blocks/title-with-icon.css',
+function diary_editor_theme_json( $theme_json ) {
+  if ( ! is_admin() || 'diary' !== ( $GLOBALS['typenow'] ?? '' ) ) {
+    return $theme_json;
+  }
+
+  return $theme_json->update_with( [
+    'version'  => 3,
+    'settings' => [ 'layout' => [ 'contentSize' => '600px' ] ],
+    'styles'   => [ 'typography' => [ 'fontSize' => '17px' ] ],
   ] );
 }

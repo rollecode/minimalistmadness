@@ -5,18 +5,18 @@
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
-.article-content .wp-block-embed iframe,
-.article-content .wp-block-embed video {
+:is(.article-content, .editor-styles-wrapper) .wp-block-embed iframe,
+:is(.article-content, .editor-styles-wrapper) .wp-block-embed video {
   max-width: 100%;
   width: 100%;
 }
 @media (max-width: 1000px) {
-  .article-content .wp-block-embed.alignwide,
-  .article-content .wp-block-embed.alignfull {
-    width: calc(100% - var(--padding-container-horizontal) * 2);
+  :is(.article-content, .editor-styles-wrapper) .wp-block-embed.alignwide,
+  :is(.article-content, .editor-styles-wrapper) .wp-block-embed.alignfull {
+    width: calc(100% - var(--padding-container-horizontal, var(--wp--custom--padding-container-horizontal)) * 2);
   }
 }
-.article-content .wp-block-embed.alignfull {
+:is(.article-content, .editor-styles-wrapper) .wp-block-embed.alignfull {
   margin-left: 0;
   margin-right: 0;
   max-width: 100%;

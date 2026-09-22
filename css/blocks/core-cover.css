@@ -5,11 +5,11 @@
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
-.article-content .wp-block-cover__inner-container {
-  padding-left: var(--padding-container-horizontal);
-  padding-right: var(--padding-container-horizontal);
+:is(.article-content, .editor-styles-wrapper) .wp-block-cover__inner-container {
+  padding-left: var(--padding-container-horizontal, var(--wp--custom--padding-container-horizontal));
+  padding-right: var(--padding-container-horizontal, var(--wp--custom--padding-container-horizontal));
 }
-.article-content .wp-block-cover__inner-container p {
+:is(.article-content, .editor-styles-wrapper) .wp-block-cover__inner-container p {
   color: #fff !important;
-  line-height: var(--line-height-core-heading);
+  line-height: var(--line-height-core-heading, var(--wp--custom--line-height-core-heading));
 }

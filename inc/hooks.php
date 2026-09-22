@@ -60,7 +60,7 @@ require get_theme_file_path( 'inc/hooks/gutenberg.php' );
 add_filter( 'allowed_block_types_all', __NAMESPACE__ . '\allowed_block_types', 10, 2 );
 add_filter( 'use_block_editor_for_post_type', __NAMESPACE__ . '\use_block_editor_for_post_type', 10, 2 );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\register_block_editor_assets' );
-add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_editor_styles' );
+add_filter( 'wp_theme_json_data_theme', __NAMESPACE__ . '\diary_editor_theme_json' );
 
 /**
  * Rest API hooks

@@ -4,7 +4,8 @@
   "settings": {
     "appearanceTools": false,
     "layout": {
-      "contentSize": "1300px"
+      "contentSize": "800px",
+      "wideSize": "1200px"
     },
     "color": {
       "custom": true,
@@ -13,57 +14,57 @@
         {
           "slug": "paragraph",
           "name": "Text",
-          "color": "var(--color-paragraph)"
+          "color": "var(--color-paragraph, #141414)"
         },
         {
           "slug": "background",
           "name": "Background",
-          "color": "var(--color-background-default)"
+          "color": "var(--color-background-default, #f0f0f0)"
         },
         {
           "slug": "accent",
           "name": "Accent",
-          "color": "var(--color-accent)"
+          "color": "var(--color-accent, #3886e1)"
         },
         {
           "slug": "accent-hover",
           "name": "Accent hover",
-          "color": "var(--color-accent-hover)"
+          "color": "var(--color-accent-hover, #17459e)"
         },
         {
           "slug": "white",
           "name": "White",
-          "color": "var(--color-white)"
+          "color": "var(--color-white, #fff)"
         },
         {
           "slug": "black",
           "name": "Black",
-          "color": "var(--color-black)"
+          "color": "var(--color-black, #141414)"
         },
         {
           "slug": "red",
           "name": "Red",
-          "color": "var(--color-red)"
+          "color": "var(--color-red, #cb3939)"
         },
         {
           "slug": "rain",
           "name": "Rain blue",
-          "color": "var(--color-rain)"
+          "color": "var(--color-rain, #4d5ca1)"
         },
         {
           "slug": "mood-good",
           "name": "Mood good",
-          "color": "var(--color-mood-good)"
+          "color": "var(--color-mood-good, #4bc435)"
         },
         {
           "slug": "mood-okay",
           "name": "Mood okay",
-          "color": "var(--color-mood-okay)"
+          "color": "var(--color-mood-okay, #fcd23e)"
         },
         {
           "slug": "mood-bad",
           "name": "Mood bad",
-          "color": "var(--color-mood-bad)"
+          "color": "var(--color-mood-bad, #e64239)"
         }
       ]
     },
@@ -74,7 +75,54 @@
         {
           "slug": "sans",
           "name": "Inter (sans)",
-          "fontFamily": "'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif"
+          "fontFamily": "'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./fonts/Inter-Regular.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "italic",
+              "fontWeight": "400",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./fonts/Inter-Italic.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./fonts/Inter-Medium.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./fonts/Inter-SemiBold.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./fonts/Inter-Bold.woff2"
+              ]
+            }
+          ]
         },
         {
           "slug": "serif-old",
@@ -126,7 +174,13 @@
       ]
     },
     "spacing": {
-      "units": ["px", "rem", "%", "vh", "vw"],
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vh",
+        "vw"
+      ],
       "spacingSizes": [
         {
           "slug": "20",
@@ -154,6 +208,64 @@
           "size": "8rem"
         }
       ]
+    },
+    "custom": {
+      "border-radius-input-field": "3px",
+      "border-width-input-field": "1px",
+      "color-background-table-cell-even": "#f3f3f3",
+      "color-background-table-cell-odd": "#fff",
+      "color-black": "#141414",
+      "color-black-rgb": "0 0 0",
+      "color-blockquote": "#0049d1",
+      "color-border-light": "#e9e9ec",
+      "color-button": "#fff",
+      "color-button-background": "#232830",
+      "color-button-background-hover": "#141414",
+      "color-button-hover": "#fff",
+      "color-darkgrey": "#4f5964",
+      "color-link-text": "#3886e1",
+      "color-paragraph": "#141414",
+      "color-white": "#fff",
+      "font-monospace": "'SFMono', 'Menlo', 'Consolas', monospace",
+      "font-paragraph": "'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif",
+      "font-sans": "'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif",
+      "font-size-14": "14px",
+      "font-size-16": "16px",
+      "font-size-18": "18px",
+      "font-size-22": "22px",
+      "font-weight-bold": "700",
+      "font-weight-medium": "500",
+      "font-weight-semibold": "600",
+      "line-height-core-heading": "1.23",
+      "line-height-headings": "1.5",
+      "line-height-paragraphs-blog": "1.77",
+      "margin-between-paragraphs": "2.7rem",
+      "margin-between-text-elements": "4rem",
+      "margin-wp-block-image": "4rem",
+      "padding-container-horizontal": "2rem"
     }
+  },
+  "styles": {
+    "color": {
+      "text": "var:preset|color|paragraph",
+      "background": "var(--color-white-two, #fafafa)"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|sans",
+      "fontSize": "var:preset|font-size|default",
+      "fontWeight": "400",
+      "lineHeight": "1.5"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--color-link-text, #3886e1)"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      }
+    },
+    "css": ".editor-styles-wrapper p > a, .editor-styles-wrapper li > a, .editor-styles-wrapper figcaption > a { color: var(--wp--preset--color--accent); display: inline; font-weight: 500; text-decoration: underline; text-decoration-color: var(--wp--preset--color--accent); text-decoration-thickness: 1px; text-underline-offset: 6px; }\n.title-with-icon { align-items: center; display: grid; font-family: var(--font-sans, inherit); font-size: var(--font-size-16, 16px); font-weight: var(--font-weight-medium, 500); grid-gap: 1.5rem; grid-template-columns: auto 1fr; } .title-with-icon .icon { align-items: center; background-color: var(--color-border-light, #e9e9ec); border-radius: 50%; display: flex; height: 42px; justify-content: center; min-width: 42px; width: 32px; } .title-with-icon .sub-title { color: var(--color-black, #141414); opacity: .8; } .title-with-icon svg { height: 18px; width: 18px; }"
   }
 }

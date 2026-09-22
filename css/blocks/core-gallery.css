@@ -5,8 +5,8 @@
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
-.article-content .blocks-gallery-grid:not(.has-nested-images),
-.article-content .wp-block-gallery:not(.has-nested-images) {
+:is(.article-content, .editor-styles-wrapper) .blocks-gallery-grid:not(.has-nested-images),
+:is(.article-content, .editor-styles-wrapper) .wp-block-gallery:not(.has-nested-images) {
   margin-left: auto;
   margin-right: auto;
 }

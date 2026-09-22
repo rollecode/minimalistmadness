@@ -5,18 +5,18 @@
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
 /* stylelint-disable number-max-precision */
-.article-content h1,
-.article-content h2,
-.article-content h3,
-.article-content h4,
-.article-content h5 {
-  line-height: var(--line-height-core-heading);
+:is(.article-content, .editor-styles-wrapper) h1,
+:is(.article-content, .editor-styles-wrapper) h2,
+:is(.article-content, .editor-styles-wrapper) h3,
+:is(.article-content, .editor-styles-wrapper) h4,
+:is(.article-content, .editor-styles-wrapper) h5 {
+  line-height: var(--line-height-core-heading, var(--wp--custom--line-height-core-heading));
 }
-.article-content h1:first-child,
-.article-content h2:first-child,
-.article-content h3:first-child,
-.article-content h4:first-child,
-.article-content h5:first-child,
-.article-content h6:first-child {
+:is(.article-content, .editor-styles-wrapper) h1:first-child,
+:is(.article-content, .editor-styles-wrapper) h2:first-child,
+:is(.article-content, .editor-styles-wrapper) h3:first-child,
+:is(.article-content, .editor-styles-wrapper) h4:first-child,
+:is(.article-content, .editor-styles-wrapper) h5:first-child,
+:is(.article-content, .editor-styles-wrapper) h6:first-child {
   margin-top: 0;
 }

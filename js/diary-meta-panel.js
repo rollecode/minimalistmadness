@@ -16,6 +16,7 @@
     ( wp.editor && wp.editor.PluginDocumentSettingPanel ) ||
     ( wp.editPost && wp.editPost.PluginDocumentSettingPanel );
   var components = wp.components;
+  var VStack = components.VStack || components.__experimentalVStack;
   var useSelect = wp.data.useSelect;
   var useEntityProp = wp.coreData.useEntityProp;
   var __ = wp.i18n ? wp.i18n.__ : function ( s ) { return s; };
@@ -92,6 +93,7 @@
     return el(
       PluginDocumentSettingPanel,
       { name: 'rollemaa-diary-meta', title: __( 'Päivän metatiedot', 'minimalistmadness' ) },
+      el( VStack, { spacing: 4 },
       text( 'gratitude', 'Kiitollisuus' ),
       select( 'mood', 'Mieliala kirjoittamishetkellä' ),
       range( 'mood_scale', 'Mieliala %' ),
@@ -108,7 +110,7 @@
       text( 'temperature', 'Lämpötila' ),
       text( 'location', 'Sijainti' ),
       select( 'drink_icon', 'Juoman kuvake' ),
-      text( 'drink_text', 'Juoman teksti' )
+      text( 'drink_text', 'Juoman teksti' ) )
     );
   }
 
