@@ -772,19 +772,6 @@
   display: table-row;
   padding: 0;
 }
-.article-content > ul.bandinfo li.block-editor-block-list__block,
-.article-content > ul:not([class]) li.block-editor-block-list__block,
-.article-content > ol:not([class]) li.block-editor-block-list__block,
-.article-content .wp-block-categories-list li.block-editor-block-list__block,
-.article-content .wp-block-list li.block-editor-block-list__block,
-.article-content ul.is-style-default li.block-editor-block-list__block,
-.article-content ol.is-style-default li.block-editor-block-list__block,
-.article-content ol:not([class]) li.block-editor-block-list__block,
-.article-content ul:not([class]) .article-content > ul.is-style-default li.block-editor-block-list__block {
-  align-items: baseline;
-  display: flex;
-  gap: 2px;
-}
 .article-content > ul.bandinfo li::before,
 .article-content > ul:not([class]) li::before,
 .article-content > ol:not([class]) li::before,

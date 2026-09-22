@@ -328,7 +328,6 @@ del {
 }
 
 .article-content figure.wp-caption.alignnone[style],
-.editor-styles-wrapper .is-root-container figure.wp-caption.alignnone[style],
 .container.container-article .entry-content figure.wp-caption.alignnone[style],
 .container.container-article article figure.wp-caption.alignnone[style],
 .container.container-article .article figure.wp-caption.alignnone[style] {
@@ -336,7 +335,6 @@ del {
   width: 100% !important;
 }
 .article-content figure.wp-caption.alignnone > img,
-.editor-styles-wrapper .is-root-container figure.wp-caption.alignnone > img,
 .container.container-article .entry-content figure.wp-caption.alignnone > img,
 .container.container-article article figure.wp-caption.alignnone > img,
 .container.container-article .article figure.wp-caption.alignnone > img {
@@ -348,10 +346,6 @@ del {
 .article-content .kuvateksti,
 .article-content .kuvateksti-horizontal,
 .article-content small,
-.editor-styles-wrapper .is-root-container .minikuvateksti,
-.editor-styles-wrapper .is-root-container .kuvateksti,
-.editor-styles-wrapper .is-root-container .kuvateksti-horizontal,
-.editor-styles-wrapper .is-root-container small,
 .container.container-article .entry-content .minikuvateksti,
 .container.container-article .entry-content .kuvateksti,
 .container.container-article .entry-content .kuvateksti-horizontal,
@@ -381,10 +375,6 @@ del {
   .article-content .kuvateksti,
   .article-content .kuvateksti-horizontal,
   .article-content small,
-  .editor-styles-wrapper .is-root-container .minikuvateksti,
-  .editor-styles-wrapper .is-root-container .kuvateksti,
-  .editor-styles-wrapper .is-root-container .kuvateksti-horizontal,
-  .editor-styles-wrapper .is-root-container small,
   .container.container-article .entry-content .minikuvateksti,
   .container.container-article .entry-content .kuvateksti,
   .container.container-article .entry-content .kuvateksti-horizontal,
@@ -401,7 +391,6 @@ del {
   }
 }
 .article-content p,
-.editor-styles-wrapper .is-root-container p,
 .container.container-article .entry-content p,
 .container.container-article article p,
 .container.container-article .article p {
@@ -414,12 +403,6 @@ del {
 .article-content h4,
 .article-content h5,
 .article-content .is-style-ingress,
-.editor-styles-wrapper .is-root-container h1,
-.editor-styles-wrapper .is-root-container h2,
-.editor-styles-wrapper .is-root-container h3,
-.editor-styles-wrapper .is-root-container h4,
-.editor-styles-wrapper .is-root-container h5,
-.editor-styles-wrapper .is-root-container .is-style-ingress,
 .container.container-article .entry-content h1,
 .container.container-article .entry-content h2,
 .container.container-article .entry-content h3,
@@ -443,9 +426,6 @@ del {
 .article-content iframe,
 .article-content .fb-post,
 .article-content small,
-.editor-styles-wrapper .is-root-container iframe,
-.editor-styles-wrapper .is-root-container .fb-post,
-.editor-styles-wrapper .is-root-container small,
 .container.container-article .entry-content iframe,
 .container.container-article .entry-content .fb-post,
 .container.container-article .entry-content small,
@@ -459,8 +439,6 @@ del {
 }
 .article-content ul,
 .article-content li,
-.editor-styles-wrapper .is-root-container ul,
-.editor-styles-wrapper .is-root-container li,
 .container.container-article .entry-content ul,
 .container.container-article .entry-content li,
 .container.container-article article ul,
@@ -470,7 +448,6 @@ del {
   line-height: 1.77;
 }
 .article-content .featured-image-single,
-.editor-styles-wrapper .is-root-container .featured-image-single,
 .container.container-article .entry-content .featured-image-single,
 .container.container-article article .featured-image-single,
 .container.container-article .article .featured-image-single {
@@ -478,7 +455,6 @@ del {
   max-width: 920px;
 }
 .article-content .featured-image-single img,
-.editor-styles-wrapper .is-root-container .featured-image-single img,
 .container.container-article .entry-content .featured-image-single img,
 .container.container-article article .featured-image-single img,
 .container.container-article .article .featured-image-single img {
@@ -486,7 +462,6 @@ del {
   width: 100%;
 }
 .article-content blockquote,
-.editor-styles-wrapper .is-root-container blockquote,
 .container.container-article .entry-content blockquote,
 .container.container-article article blockquote,
 .container.container-article .article blockquote {
@@ -499,14 +474,12 @@ del {
   padding: 0 6rem;
 }
 .article-content blockquote *,
-.editor-styles-wrapper .is-root-container blockquote *,
 .container.container-article .entry-content blockquote *,
 .container.container-article article blockquote *,
 .container.container-article .article blockquote * {
   color: var(--color-shark);
 }
 .article-content blockquote cite,
-.editor-styles-wrapper .is-root-container blockquote cite,
 .container.container-article .entry-content blockquote cite,
 .container.container-article article blockquote cite,
 .container.container-article .article blockquote cite {
@@ -515,8 +488,6 @@ del {
   transition: all 22s;
 }
 .article-content blockquote cite:hover, .article-content blockquote cite:focus,
-.editor-styles-wrapper .is-root-container blockquote cite:hover,
-.editor-styles-wrapper .is-root-container blockquote cite:focus,
 .container.container-article .entry-content blockquote cite:hover,
 .container.container-article .entry-content blockquote cite:focus,
 .container.container-article article blockquote cite:hover,
@@ -526,14 +497,12 @@ del {
   opacity: 1;
 }
 .article-content blockquote cite *,
-.editor-styles-wrapper .is-root-container blockquote cite *,
 .container.container-article .entry-content blockquote cite *,
 .container.container-article article blockquote cite *,
 .container.container-article .article blockquote cite * {
   font-size: var(--font-size-16) !important;
 }
 .article-content blockquote cite *.is-external-link::after,
-.editor-styles-wrapper .is-root-container blockquote cite *.is-external-link::after,
 .container.container-article .entry-content blockquote cite *.is-external-link::after,
 .container.container-article article blockquote cite *.is-external-link::after,
 .container.container-article .article blockquote cite *.is-external-link::after {
@@ -543,7 +512,6 @@ del {
   width: 12px;
 }
 .article-content blockquote p,
-.editor-styles-wrapper .is-root-container blockquote p,
 .container.container-article .entry-content blockquote p,
 .container.container-article article blockquote p,
 .container.container-article .article blockquote p {
@@ -551,7 +519,6 @@ del {
 }
 @media (max-width: 1000px) {
   .article-content blockquote,
-  .editor-styles-wrapper .is-root-container blockquote,
   .container.container-article .entry-content blockquote,
   .container.container-article article blockquote,
   .container.container-article .article blockquote {
@@ -560,7 +527,6 @@ del {
 }
 @media (max-width: 480px) {
   .article-content blockquote,
-  .editor-styles-wrapper .is-root-container blockquote,
   .container.container-article .entry-content blockquote,
   .container.container-article article blockquote,
   .container.container-article .article blockquote {
@@ -568,7 +534,6 @@ del {
   }
 }
 .article-content cite,
-.editor-styles-wrapper .is-root-container cite,
 .container.container-article .entry-content cite,
 .container.container-article article cite,
 .container.container-article .article cite {
@@ -576,8 +541,6 @@ del {
 }
 .article-content div[style="width: 640px;"],
 .article-content .wp-video,
-.editor-styles-wrapper .is-root-container div[style="width: 640px;"],
-.editor-styles-wrapper .is-root-container .wp-video,
 .container.container-article .entry-content div[style="width: 640px;"],
 .container.container-article .entry-content .wp-video,
 .container.container-article article div[style="width: 640px;"],
@@ -590,7 +553,6 @@ del {
   width: 100% !important;
 }
 .article-content > *.wp-block-image,
-.editor-styles-wrapper .is-root-container > *.wp-block-image,
 .container.container-article .entry-content > *.wp-block-image,
 .container.container-article article > *.wp-block-image,
 .container.container-article .article > *.wp-block-image {
@@ -598,14 +560,12 @@ del {
   margin-top: 4rem;
 }
 .article-content > *.wp-block-image .entry-photo,
-.editor-styles-wrapper .is-root-container > *.wp-block-image .entry-photo,
 .container.container-article .entry-content > *.wp-block-image .entry-photo,
 .container.container-article article > *.wp-block-image .entry-photo,
 .container.container-article .article > *.wp-block-image .entry-photo {
   margin: 0;
 }
 .article-content > *.wp-block-image .entry-photo img,
-.editor-styles-wrapper .is-root-container > *.wp-block-image .entry-photo img,
 .container.container-article .entry-content > *.wp-block-image .entry-photo img,
 .container.container-article article > *.wp-block-image .entry-photo img,
 .container.container-article .article > *.wp-block-image .entry-photo img {
@@ -614,7 +574,6 @@ del {
   width: 100%;
 }
 .article-content > * .entry-title,
-.editor-styles-wrapper .is-root-container > * .entry-title,
 .container.container-article .entry-content > * .entry-title,
 .container.container-article article > * .entry-title,
 .container.container-article .article > * .entry-title {
@@ -622,7 +581,6 @@ del {
 }
 @media screen and (min-width: 320px) {
   .article-content > * .entry-title,
-  .editor-styles-wrapper .is-root-container > * .entry-title,
   .container.container-article .entry-content > * .entry-title,
   .container.container-article article > * .entry-title,
   .container.container-article .article > * .entry-title {
@@ -631,7 +589,6 @@ del {
 }
 @media screen and (min-width: 1920px) {
   .article-content > * .entry-title,
-  .editor-styles-wrapper .is-root-container > * .entry-title,
   .container.container-article .entry-content > * .entry-title,
   .container.container-article article > * .entry-title,
   .container.container-article .article > * .entry-title {
@@ -639,7 +596,6 @@ del {
   }
 }
 .article-content > * .entry-title,
-.editor-styles-wrapper .is-root-container > * .entry-title,
 .container.container-article .entry-content > * .entry-title,
 .container.container-article article > * .entry-title,
 .container.container-article .article > * .entry-title {
@@ -650,14 +606,12 @@ del {
   text-align: center;
 }
 .article-content > * .entry-title svg,
-.editor-styles-wrapper .is-root-container > * .entry-title svg,
 .container.container-article .entry-content > * .entry-title svg,
 .container.container-article article > * .entry-title svg,
 .container.container-article .article > * .entry-title svg {
   margin-left: 5px;
 }
 .article-content > * .entry-title .entry-meta,
-.editor-styles-wrapper .is-root-container > * .entry-title .entry-meta,
 .container.container-article .entry-content > * .entry-title .entry-meta,
 .container.container-article article > * .entry-title .entry-meta,
 .container.container-article .article > * .entry-title .entry-meta {
@@ -666,7 +620,6 @@ del {
   text-align: center;
 }
 .article-content > * .entry-title .entry-meta p,
-.editor-styles-wrapper .is-root-container > * .entry-title .entry-meta p,
 .container.container-article .entry-content > * .entry-title .entry-meta p,
 .container.container-article article > * .entry-title .entry-meta p,
 .container.container-article .article > * .entry-title .entry-meta p {
@@ -674,7 +627,6 @@ del {
 }
 @media screen and (min-width: 320px) {
   .article-content > * .entry-title .entry-meta p,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta p,
   .container.container-article .entry-content > * .entry-title .entry-meta p,
   .container.container-article article > * .entry-title .entry-meta p,
   .container.container-article .article > * .entry-title .entry-meta p {
@@ -683,7 +635,6 @@ del {
 }
 @media screen and (min-width: 1920px) {
   .article-content > * .entry-title .entry-meta p,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta p,
   .container.container-article .entry-content > * .entry-title .entry-meta p,
   .container.container-article article > * .entry-title .entry-meta p,
   .container.container-article .article > * .entry-title .entry-meta p {
@@ -691,7 +642,6 @@ del {
   }
 }
 .article-content > * .entry-title .entry-meta p,
-.editor-styles-wrapper .is-root-container > * .entry-title .entry-meta p,
 .container.container-article .entry-content > * .entry-title .entry-meta p,
 .container.container-article article > * .entry-title .entry-meta p,
 .container.container-article .article > * .entry-title .entry-meta p {
@@ -700,7 +650,6 @@ del {
 }
 @media (max-width: 480px) {
   .article-content > * .entry-title .entry-meta p,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta p,
   .container.container-article .entry-content > * .entry-title .entry-meta p,
   .container.container-article article > * .entry-title .entry-meta p,
   .container.container-article .article > * .entry-title .entry-meta p {
@@ -709,7 +658,6 @@ del {
 }
 @media (max-width: 480px) {
   .article-content > * .entry-title .entry-meta,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta,
   .container.container-article .entry-content > * .entry-title .entry-meta,
   .container.container-article article > * .entry-title .entry-meta,
   .container.container-article .article > * .entry-title .entry-meta {
@@ -718,14 +666,12 @@ del {
 }
 @media (max-width: 480px) {
   .article-content > * .entry-title .entry-meta .reading-time,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta .reading-time,
   .container.container-article .entry-content > * .entry-title .entry-meta .reading-time,
   .container.container-article article > * .entry-title .entry-meta .reading-time,
   .container.container-article .article > * .entry-title .entry-meta .reading-time {
     display: block;
   }
   .article-content > * .entry-title .entry-meta .reading-time .dot-divider,
-  .editor-styles-wrapper .is-root-container > * .entry-title .entry-meta .reading-time .dot-divider,
   .container.container-article .entry-content > * .entry-title .entry-meta .reading-time .dot-divider,
   .container.container-article article > * .entry-title .entry-meta .reading-time .dot-divider,
   .container.container-article .article > * .entry-title .entry-meta .reading-time .dot-divider {
@@ -734,7 +680,6 @@ del {
 }
 @media (max-width: 600px) {
   .article-content > * .entry-title,
-  .editor-styles-wrapper .is-root-container > * .entry-title,
   .container.container-article .entry-content > * .entry-title,
   .container.container-article article > * .entry-title,
   .container.container-article .article > * .entry-title {
@@ -743,7 +688,6 @@ del {
 }
 @media (min-width: 1170px) {
   .article-content .entry-photo,
-  .editor-styles-wrapper .is-root-container .entry-photo,
   .container.container-article .entry-content .entry-photo,
   .container.container-article article .entry-photo,
   .container.container-article .article .entry-photo {
@@ -753,7 +697,6 @@ del {
     text-align: center;
   }
   .article-content .entry-photo img,
-  .editor-styles-wrapper .is-root-container .entry-photo img,
   .container.container-article .entry-content .entry-photo img,
   .container.container-article article .entry-photo img,
   .container.container-article .article .entry-photo img {
@@ -761,7 +704,6 @@ del {
     max-width: 70%;
   }
   .article-content small[style="text-align: center;"],
-  .editor-styles-wrapper .is-root-container small[style="text-align: center;"],
   .container.container-article .entry-content small[style="text-align: center;"],
   .container.container-article article small[style="text-align: center;"],
   .container.container-article .article small[style="text-align: center;"] {
@@ -1673,7 +1615,6 @@ body.logged-in .hidden-by-default.show {
   padding: 2rem;
 }
 
-.editor-styles-wrapper,
 .article-content {
   max-width: 100%;
   padding-left: 0;
@@ -1682,14 +1623,13 @@ body.logged-in .hidden-by-default.show {
   padding-top: 3.2rem;
 }
 @media (max-width: 480px) {
-  .editor-styles-wrapper,
+  
   .article-content {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
 
-.is-root-container > *,
 .article-content > * {
   line-height: var(--line-height-paragraphs-blog);
   margin-left: auto;
@@ -1699,7 +1639,6 @@ body.logged-in .hidden-by-default.show {
   padding-right: 0;
   width: 100%;
 }
-.is-root-container > *.instagram-media.instagram-media-rendered, .is-root-container > *.wp-video, .is-root-container > *.twitter-tweet, .is-root-container > *.instagram-media, .is-root-container > *.is-provider-instagram, .is-root-container > *.is-provider-twitter, .is-root-container > *.is-provider-facebook,
 .article-content > *.instagram-media.instagram-media-rendered,
 .article-content > *.wp-video,
 .article-content > *.twitter-tweet,
@@ -1712,12 +1651,12 @@ body.logged-in .hidden-by-default.show {
   width: 100% !important;
 }
 @media (max-width: 840px) {
-  .is-root-container > *,
+  
   .article-content > * {
     padding-left: var(--padding-container-horizontal);
     padding-right: var(--padding-container-horizontal);
   }
-  .is-root-container > *.alignfull,
+  
   .article-content > *.alignfull {
     padding-left: var(--padding-container-horizontal);
     padding-right: var(--padding-container-horizontal);
@@ -1725,42 +1664,30 @@ body.logged-in .hidden-by-default.show {
   }
 }
 
-@media (max-width: 840px) {
-  body.post-type-diary .is-root-container > * {
-    width: calc(100% - var(--padding-container-horizontal) * 2);
-  }
-}
-
-.editor-styles-wrapper .alignleft > *,
 .article-content .alignleft > * {
   float: left;
 }
-.editor-styles-wrapper .alignright > *,
 .article-content .alignright > * {
   float: right;
 }
-.editor-styles-wrapper .alignleft > img,
 .article-content .alignleft > img {
   margin-bottom: var(--margin-between-paragraphs);
   margin-right: var(--padding-container-horizontal);
   margin-top: var(--margin-between-paragraphs);
 }
-.editor-styles-wrapper .alignleft > img + figcaption,
 .article-content .alignleft > img + figcaption {
   margin-top: 0;
 }
-.editor-styles-wrapper .alignright > img,
 .article-content .alignright > img {
   margin-bottom: var(--margin-between-paragraphs);
   margin-left: var(--padding-container-horizontal);
   margin-top: var(--margin-between-paragraphs);
 }
-.editor-styles-wrapper .alignright > img + figcaption,
 .article-content .alignright > img + figcaption {
   margin-top: 0;
 }
 @media (min-width: 1240px) {
-  .editor-styles-wrapper .alignwide,
+  
   .article-content .alignwide {
     max-width: 1200px;
     padding-left: 0;
@@ -1768,19 +1695,17 @@ body.logged-in .hidden-by-default.show {
     width: 100%;
   }
 }
-.editor-styles-wrapper .alignfull,
 .article-content .alignfull {
   max-width: 100%;
   padding-left: 0;
   padding-right: 0;
   width: 100%;
 }
-.editor-styles-wrapper .alignfull.wp-block-image img,
 .article-content .alignfull.wp-block-image img {
   border-radius: 0;
 }
 @media (min-width: 840px) {
-  .editor-styles-wrapper .alignfull,
+  
   .article-content .alignfull {
     margin-bottom: var(--padding-block);
     margin-top: var(--padding-block);
@@ -1788,16 +1713,13 @@ body.logged-in .hidden-by-default.show {
     width: 100%;
   }
 }
-.editor-styles-wrapper .post-past__content-excerpt .wp-block-image,
-.editor-styles-wrapper .post-past__content-excerpt .align-full,
 .article-content .post-past__content-excerpt .wp-block-image,
 .article-content .post-past__content-excerpt .align-full {
   margin-bottom: 0 !important;
   margin-top: 0 !important;
 }
 @media (min-width: 840px) {
-  .editor-styles-wrapper .post-past__content-excerpt .wp-block-image,
-  .editor-styles-wrapper .post-past__content-excerpt .align-full,
+  
   .article-content .post-past__content-excerpt .wp-block-image,
   .article-content .post-past__content-excerpt .align-full {
     margin-bottom: 0 !important;
@@ -1806,10 +1728,6 @@ body.logged-in .hidden-by-default.show {
 }
 
 /* stylelint-disable selector-max-combinators, selector-max-compound-selectors */
-.editor-styles-wrapper figcaption[aria-label=Kuvateksti],
-.editor-styles-wrapper figcaption,
-.editor-styles-wrapper cite,
-.editor-styles-wrapper small,
 .article-content figcaption[aria-label=Kuvateksti],
 .article-content figcaption,
 .article-content cite,
@@ -1828,10 +1746,7 @@ body.logged-in .hidden-by-default.show {
   width: 100%;
 }
 @media (max-width: 480px) {
-  .editor-styles-wrapper figcaption[aria-label=Kuvateksti],
-  .editor-styles-wrapper figcaption,
-  .editor-styles-wrapper cite,
-  .editor-styles-wrapper small,
+  
   .article-content figcaption[aria-label=Kuvateksti],
   .article-content figcaption,
   .article-content cite,
@@ -1839,10 +1754,6 @@ body.logged-in .hidden-by-default.show {
     margin-top: 2rem;
   }
 }
-.editor-styles-wrapper .wp-block-image figcaption,
-.editor-styles-wrapper .wp-block-image .alignright > figcaption,
-.editor-styles-wrapper .wp-block-image .aligncenter > figcaption,
-.editor-styles-wrapper .wp-block-image.is-resized > figcaption,
 .article-content .wp-block-image figcaption,
 .article-content .wp-block-image .alignright > figcaption,
 .article-content .wp-block-image .aligncenter > figcaption,
@@ -1850,7 +1761,6 @@ body.logged-in .hidden-by-default.show {
   display: block;
   width: 100%;
 }
-.editor-styles-wrapper cite,
 .article-content cite {
   margin-bottom: 0;
 }
@@ -1873,7 +1783,6 @@ body.logged-in .hidden-by-default.show {
   width: 100%;
 }
 
-.editor-styles-wrapper img,
 .article-content img {
   border-radius: 4px;
 }
@@ -1902,17 +1811,6 @@ a:hover, a:focus {
   color: var(--color-link-text);
 }
 
-.editor-styles-wrapper [data-type="core/paragraph"] > a,
-.editor-styles-wrapper li > a,
-.editor-styles-wrapper p > strong > a,
-.editor-styles-wrapper p > em > a,
-.editor-styles-wrapper p:not([class]) > a:not([class]),
-.editor-styles-wrapper p.has-text-align-left > a,
-.editor-styles-wrapper p.has-text-align-center > a,
-.editor-styles-wrapper p.has-text-align-right > a,
-.editor-styles-wrapper p.has-small-font-size > a,
-.editor-styles-wrapper figcaption > a,
-.editor-styles-wrapper p:not([class]) > a.is-external-link:not(.button),
 .article-content [data-type="core/paragraph"] > a,
 .article-content li > a,
 .article-content p > strong > a,
@@ -1933,27 +1831,6 @@ a:hover, a:focus {
   text-underline-offset: 6px;
   transition: all 0.18s ease-in-out;
 }
-.editor-styles-wrapper [data-type="core/paragraph"] > a:focus, .editor-styles-wrapper [data-type="core/paragraph"] > a:hover,
-.editor-styles-wrapper li > a:focus,
-.editor-styles-wrapper li > a:hover,
-.editor-styles-wrapper p > strong > a:focus,
-.editor-styles-wrapper p > strong > a:hover,
-.editor-styles-wrapper p > em > a:focus,
-.editor-styles-wrapper p > em > a:hover,
-.editor-styles-wrapper p:not([class]) > a:not([class]):focus,
-.editor-styles-wrapper p:not([class]) > a:not([class]):hover,
-.editor-styles-wrapper p.has-text-align-left > a:focus,
-.editor-styles-wrapper p.has-text-align-left > a:hover,
-.editor-styles-wrapper p.has-text-align-center > a:focus,
-.editor-styles-wrapper p.has-text-align-center > a:hover,
-.editor-styles-wrapper p.has-text-align-right > a:focus,
-.editor-styles-wrapper p.has-text-align-right > a:hover,
-.editor-styles-wrapper p.has-small-font-size > a:focus,
-.editor-styles-wrapper p.has-small-font-size > a:hover,
-.editor-styles-wrapper figcaption > a:focus,
-.editor-styles-wrapper figcaption > a:hover,
-.editor-styles-wrapper p:not([class]) > a.is-external-link:not(.button):focus,
-.editor-styles-wrapper p:not([class]) > a.is-external-link:not(.button):hover,
 .article-content [data-type="core/paragraph"] > a:focus,
 .article-content [data-type="core/paragraph"] > a:hover,
 .article-content li > a:focus,
