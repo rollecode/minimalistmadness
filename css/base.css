@@ -436,10 +436,10 @@ a.is-external-link {
   justify-content: space-between;
 }
 a.is-external-link:hover::after, a.is-external-link:focus::after {
-  background-image: url("../../svg/external-link-accent-hover-2.svg");
+  background-image: url("../svg/external-link-accent-hover-2.svg");
 }
 a.is-external-link::after {
-  background-image: url("../../svg/external-link-accent-2.svg");
+  background-image: url("../svg/external-link-accent-2.svg");
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 12px 12px;
@@ -579,42 +579,42 @@ img + .external-link-icon {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/Inter-Regular.woff2") format("woff2");
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: italic;
   font-weight: 400;
-  src: url("../../fonts/Inter-Italic.woff2") format("woff2");
+  src: url("../fonts/Inter-Italic.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../../fonts/Inter-Medium.woff2") format("woff2");
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src: url("../../fonts/Inter-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../../fonts/Inter-Bold.woff2") format("woff2");
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
 }
 :root {
   --font-serif: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
@@ -1196,7 +1196,7 @@ body.wp-admin .entry-content ul.metadata a:not(.button):not(.post-edit-link):not
 html.wp-toolbar:root .entry-content ul.metadata a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after,
 .editor-styles-wrapper .sub-title .entry-content ul.metadata a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after,
 .theme-dark .entry-content ul.metadata a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after {
-  background-image: url("../../svg/external-link-d0d1d2.svg") !important;
+  background-image: url("../svg/external-link-d0d1d2.svg") !important;
 }
 body.wp-admin .editor-styles-wrapper .heatmap-chart .hm-l0,
 body.wp-admin .heatmap-chart .hm-l0,

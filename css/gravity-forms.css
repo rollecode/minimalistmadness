@@ -57,7 +57,7 @@
 #gform_wrapper_3 select,
 #gform_wrapper_2 select {
   appearance: none;
-  background-image: url("../../svg/select.svg");
+  background-image: url("../svg/select.svg");
   background-position: right var(--gap-select-icon) center;
   background-repeat: no-repeat;
   background-size: 11px auto;

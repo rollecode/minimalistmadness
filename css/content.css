@@ -537,7 +537,7 @@ del {
 .container.container-article .entry-content blockquote cite *.is-external-link::after,
 .container.container-article article blockquote cite *.is-external-link::after,
 .container.container-article .article blockquote cite *.is-external-link::after {
-  background-image: url("../../svg/external-link-shark.svg");
+  background-image: url("../svg/external-link-shark.svg");
   background-size: 12px 12px;
   height: 12px;
   width: 12px;
@@ -1634,7 +1634,7 @@ body.logged-in .hidden-by-default.show {
   color: var(--color-black);
 }
 .comments-area .comment-list li .comment-author a.is-external-link:hover::after, .comments-area .comment-list li .comment-author a.is-external-link:focus::after, .comments-area .comment-list li .comment-author a.is-external-link::after {
-  background-image: url("../../svg/external-link-black.svg");
+  background-image: url("../svg/external-link-black.svg");
   background-size: 12px 12px;
   height: 11px;
   margin-left: 3px;

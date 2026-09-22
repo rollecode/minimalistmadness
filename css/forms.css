@@ -240,7 +240,7 @@ input[type=search]:focus::placeholder {
 
 select {
   appearance: none;
-  background-image: url("../../svg/select.svg");
+  background-image: url("../svg/select.svg");
   background-position: right center;
   background-repeat: no-repeat;
   border: 0;

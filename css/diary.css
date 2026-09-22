@@ -952,7 +952,7 @@ body.single-diary .editor-styles-wrapper .is-root-container ul.metadata:not(.ali
 body.single-diary .article-content.entry-content .post-past.post.diary.type-diary.metadata a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after,
 body.single-diary .article-content.entry-content div.metadata:not(.alignwide):not(.alignfull) a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after,
 body.single-diary .article-content.entry-content ul.metadata:not(.alignwide):not(.alignfull) a:not(.button):not(.post-edit-link):not(.author-link).is-external-link::after {
-  background-image: url("../../svg/external-link-323232.svg");
+  background-image: url("../svg/external-link-323232.svg");
 }
 body.post-type-archive-diary .editor-styles-wrapper .is-root-container .post-past.post.diary.type-diary.metadata li,
 body.post-type-archive-diary .editor-styles-wrapper .is-root-container div.metadata:not(.alignwide):not(.alignfull) li,
@@ -3091,7 +3091,7 @@ body.single-diary .article-content.entry-content ol.is-style-todo-list li.checke
 body.single-diary .article-content.entry-content ul.is-style-todo-list li.is-style-checked::before,
 body.single-diary .article-content.entry-content ul.is-style-todo-list li.checked::before {
   background-color: var(--color-darkgrey);
-  background-image: url("../../svg/checked-white.svg");
+  background-image: url("../svg/checked-white.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
