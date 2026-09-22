@@ -30,6 +30,9 @@ if ( file_exists( get_theme_file_path( '/inc/includes/post-type.php' ) ) ) {
   require get_theme_file_path( '/inc/includes/post-type.php' );
 }
 
+// Diary entry helpers, shared with quick-post.php
+require get_theme_file_path( '/inc/diary-entry.php' );
+
 // Shortcodes etc.
 require get_theme_file_path( '/inc/includes/rollemaa-legacy.php' );
 
