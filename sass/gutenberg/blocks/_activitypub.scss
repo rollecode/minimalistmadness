@@ -1,4 +1,7 @@
 .wp-block-activitypub-reactions {
+  // Plugin CSS loads later and sets max-width to an undefined theme.json var
+  max-width: $width-max-article;
+
   .wp-block-heading {
     display: none;
   }
