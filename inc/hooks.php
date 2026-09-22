@@ -48,6 +48,12 @@ add_action( 'init', __NAMESPACE__ . '\register_diary_meta' );
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_diary_meta_panel' );
 
 /**
+ * Diary REST API for the MCP server
+ */
+require get_theme_file_path( 'inc/hooks/diary-api.php' );
+add_action( 'rest_api_init', __NAMESPACE__ . '\register_diary_api' );
+
+/**
  * Gutenberg associated hooks
  */
 require get_theme_file_path( 'inc/hooks/gutenberg.php' );
