@@ -103,17 +103,14 @@
   }
 
   /**
-   * Most read posts counter (dude-most-read-posts, script bundled here)
+   * Most read posts counter, one count per post per hour per tab
    */
-  if (typeof window.dmrp !== 'undefined' && window.dmrp.id) {
+  if (typeof window.mostRead !== 'undefined') {
+    const key = `mostread_${window.mostRead.id}`;
     const now = Date.now();
-    const saved = sessionStorage.getItem(`dmrpreadcookie_${window.dmrp.id}`);
-    if ((now - saved) > window.dmrp.cookie_timeout) {
-      sessionStorage.setItem(`dmrpreadcookie_${window.dmrp.id}`, now);
-      fetch(window.dmrp.ajax_url, {
-        method: 'POST',
-        body: new URLSearchParams({ action: 'dmrp_count', nonce: window.dmrp.nonce, id: window.dmrp.id }),
-      });
+    if (now - Number(sessionStorage.getItem(key)) > 3600000) {
+      sessionStorage.setItem(key, now);
+      fetch(window.mostRead.url, { method: 'POST', keepalive: true });
     }
   }
 
@@ -242,14 +239,6 @@
     const spinner = document.querySelector('.block-loadable .load-more-spinner');
     const buttonContainer = loadMoreButton.closest('.load-more-container');
 
-    // PHP-style bracket serialization for nested query args
-    const buildParams = (obj, prefix) => Object.entries(obj).flatMap(([ key, value ]) => {
-      const paramKey = prefix ? `${prefix}[${key}]` : key;
-      if (value === null || typeof value === 'undefined') return [];
-      if (typeof value === 'object') return buildParams(value, paramKey);
-      return [ `${encodeURIComponent(paramKey)}=${encodeURIComponent(value)}` ];
-    }).join('&');
-
     const renderPost = (post) => `<article class="entry post-card post no-animation item-vue" id="post-${post.id}">
       <div class="post-card-content">
         <a href="${post.link}" class="global-link" aria-label="${(post.title.rendered || '').replace(/"/g, '&quot;')}" aria-hidden="true" tabindex="-1"></a>
@@ -265,9 +254,15 @@
       e.preventDefault();
       spinner.style.display = '';
       query.paged += 1;
-      query._embed = true;
 
-      fetch(`${window.air.baseurl}wp_query/args/?${buildParams(query)}`)
+      const params = new URLSearchParams({
+        page: query.paged,
+        per_page: query.posts_per_page,
+        _fields: 'id,link,title,excerpt,time_custom,reading_time_custom,featured_image_custom',
+      });
+      (query.post__not_in || []).forEach((id) => params.append('exclude[]', id));
+
+      fetch(`${window.air.baseurl}wp/v2/posts?${params}`)
         .then((response) => response.json())
         .then((posts) => {
           spinner.style.display = 'none';

@@ -322,15 +322,12 @@ function enqueue_theme_scripts() {
     'baseurl'         => get_rest_url(),
   ) );
 
-  wp_localize_script( 'scripts', 'dmrp', array(
-    'id'              => get_the_id(),
-    'nonce'           => wp_create_nonce( 'dmrp' . get_the_id() ),
-    'ajax_url'        => admin_url( 'admin-ajax.php' ),
-    'cookie_timeout'  => apply_filters( 'dmrp_cookie_timeout', 3600000 ),
-  ) );
-
-  // Remove dude-most-read-posts script (included in scripts.js for optimization)
-  wp_dequeue_script( 'dmrp' );
+  if ( is_singular( 'post' ) ) {
+    wp_localize_script( 'scripts', 'mostRead', [
+      'url' => rest_url( 'rollemaa/v1/read/' . get_the_ID() ),
+      'id'  => get_the_ID(),
+    ] );
+  }
 
 }
 

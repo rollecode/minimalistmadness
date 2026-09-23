@@ -58,21 +58,17 @@ get_header(); ?>
               <h2 id="kohut">30 kaikkien aikojen luetuinta kirjoitusta</h2>
 
               <?php
-              if ( function_exists( 'get_most_popular_posts' ) ) :
-                $query = get_most_popular_posts( 'alltime', array(
-                  'posts_per_page' => 30,
-                ) );
+              $query = most_read_query( 'alltime', 30 );
 
-                if ( $query->have_posts() ) : ?>
+              if ( $query && $query->have_posts() ) : ?>
                 <ul>
                   <?php while ( $query->have_posts() ) :
                   $query->the_post(); ?>
-                  <li><a href="<?php echo esc_url( get_the_permalink() ); ?>" rel="bookmark"><?php echo esc_attr( get_the_title() ); ?> (<?php echo esc_attr( get_post_read_count( get_the_id(), 'alltime' ) ); ?>)</a></li>
+                  <li><a href="<?php echo esc_url( get_the_permalink() ); ?>" rel="bookmark"><?php echo esc_attr( get_the_title() ); ?> (<?php echo esc_attr( most_read_count( get_the_id(), 'alltime' ) ); ?>)</a></li>
                 <?php endwhile; ?>
               </ul>
             <?php endif;
-            wp_reset_postdata();
-            endif; ?>
+            wp_reset_postdata(); ?>
 
             <h2>30 kaikkien aikojen kommentoiduinta kirjoitusta</h2>
 

@@ -28,7 +28,7 @@ namespace Air_Light;
       get_template_part( 'template-parts/content', 'none' );
     endif; ?>
 
-    <?php dynamic_sidebar(); ?>
+    <?php diary_calendar(); ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->

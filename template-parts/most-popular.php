@@ -7,13 +7,9 @@
 
 namespace Air_Light;
 
-if ( function_exists( 'get_most_popular_posts' ) ) :
-  $query = get_most_popular_posts( 'week', array(
-    'posts_per_page' => 4,
-  ) );
+$query = most_read_query( 'week', 4 );
 
-if ( ! empty( $query ) ) :
-  if ( $query->have_posts() ) : ?>
+if ( $query && $query->have_posts() ) : ?>
 
   <section class="block block-four-posts block-most-popular">
     <div class="container">
@@ -48,7 +44,5 @@ if ( ! empty( $query ) ) :
     </div>
   </section>
   <?php
-endif;
-endif;
 endif;
 wp_reset_postdata();

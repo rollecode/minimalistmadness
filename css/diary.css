@@ -2083,10 +2083,10 @@ body.post-type-diary .acf-fields [class^=acf-] * {
   position: absolute;
   width: 1px;
 }
-.widget.widget_calendar .wp-calendar.wp-calendar-table {
+.widget.widget_calendar .wp-calendar-table {
   width: 100%;
 }
-.widget.widget_calendar .wp-calendar * {
+.widget.widget_calendar .wp-calendar-table * {
   font-size: var(--font-size-14);
   text-align: left;
 }

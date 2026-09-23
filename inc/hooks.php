@@ -69,6 +69,12 @@ add_filter( 'wp_theme_json_data_theme', __NAMESPACE__ . '\diary_editor_theme_jso
 require get_theme_file_path( 'inc/hooks/rest-api.php' );
 
 /**
+ * Most read posts
+ */
+require get_theme_file_path( 'inc/hooks/most-read.php' );
+add_action( 'rest_api_init', __NAMESPACE__ . '\register_most_read_api' );
+
+/**
  * Add required attributes to Gravity Forms fields to enable native validation
  */
 add_filter( 'gform_field_content', __NAMESPACE__ . '\add_custom_attr', 10, 5 );
