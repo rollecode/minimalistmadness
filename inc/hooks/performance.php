@@ -99,10 +99,40 @@ add_action( 'init', function () {
  * without waiting for the CSS to discover the @font-face rules.
  */
 add_action( 'wp_head', function () {
-  foreach ( [ 'Inter-Regular', 'Inter-Bold' ] as $font ) {
+  foreach ( [ 'Inter-Regular', 'Inter-SemiBold', 'Inter-Bold' ] as $font ) {
     printf(
       '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n",
-      esc_url( get_theme_file_uri( 'fonts/' . $font . '.woff2' ) )
+      esc_url( get_theme_file_uri( 'fonts/' . $font . '-latin.woff2' ) )
     );
   }
 }, 2 );
+
+/**
+ * Stylesheets nothing above the fold needs load without blocking the first
+ * paint: the JS-filled rain effect, forms and the footer everywhere, and on
+ * singles the related-post cards and the JS-injected own ad too.
+ */
+const NON_BLOCKING_STYLES          = [ 'styles-rain', 'styles-forms', 'styles-footer' ];
+const NON_BLOCKING_SINGULAR_STYLES = [ 'styles-cards', 'styles-ads' ];
+
+add_filter( 'style_loader_tag', function ( $tag, $handle ) {
+  $short_page = is_404() || is_search();
+  $below_fold = ( in_array( $handle, NON_BLOCKING_STYLES, true ) && ! ( $short_page && 'styles-footer' === $handle ) )
+    || ( is_singular() && ! is_front_page() && in_array( $handle, NON_BLOCKING_SINGULAR_STYLES, true ) );
+
+  if ( ! $below_fold ) {
+    return $tag;
+  }
+
+  return str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag );
+}, 10, 2 );
+
+/**
+ * Generated image sizes are WebP; the uploaded original stays as it was.
+ */
+add_filter( 'image_editor_output_format', function ( $formats ) {
+  return $formats + [
+    'image/jpeg' => 'image/webp',
+    'image/png'  => 'image/webp',
+  ];
+} );

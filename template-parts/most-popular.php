@@ -32,7 +32,7 @@ if ( $query && $query->have_posts() ) : ?>
             <div class="post-card-image"><div class="img"><p class="post-card-details"><time datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'j.' ); ?> <?php the_time( 'F' ); ?>ta <?php the_time( 'Y' ); ?></time><br /><?php echo khonsu_estimated_reading_time(); // phpcs:ignore ?></p>
             <div class="image image-background image-background-layer"><?php if ( has_post_thumbnail( $post->ID ) ) { ?>
 
-            <img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'large' ); ?>" alt="<?php echo esc_attr( get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ) ); ?>" loading="eager" />
+            <?php echo wp_get_attachment_image( get_post_thumbnail_id( $post->ID ), 'large', false, [ 'loading' => 'lazy', 'sizes' => '(max-width: 840px) 100vw, 610px' ] ); ?>
 
             <?php } else { native_lazyload_tag( khonsu_get_random_image_id() ); } ?></div></div></div>
             </div>

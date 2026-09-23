@@ -83,8 +83,9 @@
               "fontWeight": "400",
               "fontDisplay": "swap",
               "src": [
-                "file:./fonts/Inter-Regular.woff2"
-              ]
+                "file:./fonts/Inter-Regular-latin.woff2"
+              ],
+              "unicodeRange": "U+0000-00FF, U+0100-017F, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD"
             },
             {
               "fontFamily": "Inter",
@@ -92,8 +93,9 @@
               "fontWeight": "400",
               "fontDisplay": "swap",
               "src": [
-                "file:./fonts/Inter-Italic.woff2"
-              ]
+                "file:./fonts/Inter-Italic-latin.woff2"
+              ],
+              "unicodeRange": "U+0000-00FF, U+0100-017F, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD"
             },
             {
               "fontFamily": "Inter",
@@ -101,8 +103,9 @@
               "fontWeight": "500",
               "fontDisplay": "swap",
               "src": [
-                "file:./fonts/Inter-Medium.woff2"
-              ]
+                "file:./fonts/Inter-Medium-latin.woff2"
+              ],
+              "unicodeRange": "U+0000-00FF, U+0100-017F, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD"
             },
             {
               "fontFamily": "Inter",
@@ -110,8 +113,9 @@
               "fontWeight": "600",
               "fontDisplay": "swap",
               "src": [
-                "file:./fonts/Inter-SemiBold.woff2"
-              ]
+                "file:./fonts/Inter-SemiBold-latin.woff2"
+              ],
+              "unicodeRange": "U+0000-00FF, U+0100-017F, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD"
             },
             {
               "fontFamily": "Inter",
@@ -119,8 +123,9 @@
               "fontWeight": "700",
               "fontDisplay": "swap",
               "src": [
-                "file:./fonts/Inter-Bold.woff2"
-              ]
+                "file:./fonts/Inter-Bold-latin.woff2"
+              ],
+              "unicodeRange": "U+0000-00FF, U+0100-017F, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-2193, U+2212, U+2215, U+FEFF, U+FFFD"
             }
           ]
         },

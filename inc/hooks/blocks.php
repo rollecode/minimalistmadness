@@ -34,7 +34,7 @@ function print_theme_prepaint_script() {
       document.documentElement.className = 'theme-dark' === theme ? 'theme-dark' : 'theme-light';
     })();
   </script>
-  <script data-domain="rollemaa.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
+  <script defer data-domain="rollemaa.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
   <?php
 }
 

@@ -13,7 +13,7 @@ namespace Air_Light;
 
   <div class="image image-background image-background-layer">
     <?php if ( has_post_thumbnail() ) { ?>
-      <img src="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" alt="<?php echo esc_attr( get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ) ); ?>" loading="eager" />
+      <?php echo wp_get_attachment_image( get_post_thumbnail_id( $post->ID ), 'full', false, [ 'loading' => 'eager', 'fetchpriority' => 'high', 'sizes' => '100vw' ] ); ?>
     <?php } ?></div>
 
   <div class="shade" aria-hidden="true"></div>
