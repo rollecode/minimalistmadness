@@ -174,7 +174,7 @@ function enqueue_theme_scripts() {
   }
   if ( is_front_page() || is_singular() ) {
     $chunks[] = 'hero';
-    $chunks[] = 'cards'; // front page feed + Relevanssi related posts
+    $chunks[] = 'cards'; // front page feed + related posts
   }
   if ( is_singular( 'page' ) && ! is_front_page() ) {
     $chunks[] = 'page';
