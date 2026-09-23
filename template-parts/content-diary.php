@@ -244,7 +244,7 @@ $mood = $mood_value ? [ 'value' => $mood_value, 'label' => diary_meta_label( 'mo
           <?php if ( ! empty( $weather_text ) ) : ?>
             <li>
               <?php include get_theme_file_path( "/svg/{$weather_icon}.svg" ); ?>
-              <?php echo esc_html( $temperature ); ?> &deg; C, <?php echo esc_html( $weather_text ); ?>
+              <?php echo esc_html( false === strpos( $temperature, '°' ) ? $temperature . ' °C' : $temperature ); ?>, <?php echo esc_html( $weather_text ); ?>
             </li>
           <?php endif; ?>
 
