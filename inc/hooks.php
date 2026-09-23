@@ -20,6 +20,7 @@ namespace Air_Light;
  */
 require get_theme_file_path( 'inc/hooks/general.php' );
 add_action( 'widgets_init', __NAMESPACE__ . '\widgets_init' );
+add_action( 'template_redirect', __NAMESPACE__ . '\serve_random_posts', 0 );
 
 /**
  * Scripts and styles associated hooks

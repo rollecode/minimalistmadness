@@ -156,7 +156,7 @@
   const dynamicContent = document.querySelector('.dynamic-content');
   if (dynamicContent) {
     const loadRandom = () => {
-      fetch('/content/themes/minimalistmadness/template-parts/random-dynamic.php')
+      fetch('/random-dynamic/')
         .then((response) => response.text())
         .then((html) => { dynamicContent.innerHTML = html; });
     };

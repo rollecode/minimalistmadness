@@ -438,3 +438,19 @@ function khonsu_calculate_age( $birthdate ) {
 
   return $yeardiff;
 }
+
+/**
+ * Serve the random posts fragment at /random-dynamic/. The server blocks
+ * direct requests to theme PHP files, and nginx already skips its page
+ * cache for this path.
+ */
+function serve_random_posts() {
+  if ( '/random-dynamic/' !== wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ) ) {
+    return;
+  }
+
+  status_header( 200 );
+  nocache_headers();
+  get_template_part( 'template-parts/random-dynamic' );
+  exit;
+}

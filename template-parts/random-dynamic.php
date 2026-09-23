@@ -9,8 +9,6 @@
 
 namespace Air_Light;
 
-include_once( $_SERVER['DOCUMENT_ROOT'] . '/wp/wp-load.php' ); // phpcs:ignore
-
 $args = array(
   'post_type' => 'post',
   'posts_per_page' => 4,
