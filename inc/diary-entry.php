@@ -199,10 +199,10 @@ function qp_device( $ua ) {
 }
 
 /**
- * Days since the epoch, counting the epoch itself as day 1.
+ * Days since the epoch (the epoch itself is day 0).
  */
 function qp_day_number( $qp, DateTime $date ) {
-  return ( new DateTime( $qp['epoch'], new DateTimeZone( $qp['timezone'] ) ) )->diff( $date )->days + 1;
+  return ( new DateTime( $qp['epoch'], new DateTimeZone( $qp['timezone'] ) ) )->diff( $date )->days;
 }
 
 /**
@@ -243,16 +243,16 @@ function qp_to_gutenberg( $raw ) {
   if ( '' === $raw ) {
     return '';
   }
-  if ( false !== strpos( $raw, '<!-- wp:' ) ) {
-    return $raw;
-  }
   $blocks = [];
   foreach ( preg_split( '/\n\s*\n/', $raw ) as $p ) {
     $p = trim( $p );
     if ( '' === $p ) {
       continue;
     }
-    if ( preg_match( '#^https?://(www\.)?(youtube\.com/watch|youtu\.be/|vimeo\.com/)#i', $p ) ) {
+    // Inserted image blocks pass through; the prose around them still gets wrapped
+    if ( 0 === strpos( $p, '<!-- wp:' ) ) {
+      $blocks[] = $p;
+    } elseif ( preg_match( '#^https?://(www\.)?(youtube\.com/watch|youtu\.be/|vimeo\.com/)#i', $p ) ) {
       $u        = esc_url( $p );
       $blocks[] = "<!-- wp:embed {\"url\":\"$u\",\"type\":\"video\"} -->\n<figure class=\"wp-block-embed is-type-video\"><div class=\"wp-block-embed__wrapper\">\n$u\n</div></figure>\n<!-- /wp:embed -->";
     } elseif ( preg_match( '#^https?://(twitter\.com|x\.com)/#i', $p ) ) {
