@@ -196,27 +196,46 @@
     if (e.key === 'Escape' && document.body.classList.contains('search-open')) closeSearch();
   });
 
-  if (searchInput) {
-    const doSearch = debounce(() => {
-      const search = searchInput.value;
+  if (searchInput && window.algolia) {
+    const { appId, searchKey, index } = window.algolia;
+    const endpoint = `https://${appId}-dsn.algolia.net/1/indexes/${index}/query`;
+    const cache = new Map();
 
-      if (!search.trim()) {
+    const renderHits = (hits) => {
+      if (!hits.length) {
+        searchResults.innerHTML = '<li class="no-results"><h2>Ei hakutuloksia.</h2></li>';
+        return;
+      }
+      searchResults.innerHTML = hits.map((hit) => `<li><a href="${hit.url}" class="global-link" aria-hidden="true" tabindex="-1"></a><span class="search-post-type">${hit.type_label} &middot; <span class="search-post-date">${hit.date_readable}</span></span><h2><a class="article--link" href="${hit.url}">${hit._highlightResult.title.value}</a></h2><div class="search-excerpt">${hit._snippetResult ? hit._snippetResult.content.value : ''}</div></li>`).join('');
+    };
+
+    // Free plan: 10K requests a month, so wait for 3 characters and a typing pause, and never ask twice
+    const doSearch = debounce(() => {
+      const search = searchInput.value.trim();
+
+      if (search.length < 3) {
         searchResults.innerHTML = '';
         return;
       }
 
-      fetch(`${window.air.baseurl}rollemaa/v1/search?s=${encodeURIComponent(search)}`)
-        .then((response) => response.json())
-        .then((results) => {
-          if (!results.length) {
-            searchResults.innerHTML = '<li class="no-results"><h2>Ei hakutuloksia.</h2></li>';
-            return;
-          }
-          searchResults.innerHTML = results.map((result) => `<li><a href="${result.link}" class="global-link" aria-hidden="true" tabindex="-1"></a><span class="search-post-type">${result.post_type_name} &middot; <span class="search-post-date">${result.post_date_readable}</span></span><h2><a class="article--link" href="${result.link}">${result.post_title}</a></h2><div class="search-excerpt">${result.post_excerpt}</div></li>`).join('');
-        });
-    }, 250);
+      if (cache.has(search)) {
+        renderHits(cache.get(search));
+        return;
+      }
 
-    [ 'keyup', 'input', 'paste' ].forEach((eventName) => searchInput.addEventListener(eventName, doSearch));
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'X-Algolia-Application-Id': appId, 'X-Algolia-API-Key': searchKey },
+        body: JSON.stringify({ query: search }),
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          cache.set(search, result.hits || []);
+          if (searchInput.value.trim() === search) renderHits(result.hits || []);
+        });
+    }, 300);
+
+    searchInput.addEventListener('input', doSearch);
   }
 
   /**

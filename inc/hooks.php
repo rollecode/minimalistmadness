@@ -75,6 +75,17 @@ require get_theme_file_path( 'inc/hooks/most-read.php' );
 add_action( 'rest_api_init', __NAMESPACE__ . '\register_most_read_api' );
 
 /**
+ * Algolia search index sync
+ */
+require get_theme_file_path( 'inc/hooks/algolia.php' );
+require get_theme_file_path( 'inc/hooks/related-posts.php' );
+add_action( 'wp_after_insert_post', __NAMESPACE__ . '\algolia_sync_post', 10, 2 );
+add_action( 'before_delete_post', __NAMESPACE__ . '\algolia_sync_deleted', 10, 2 );
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+  \WP_CLI::add_command( 'rollemaa-algolia reindex', __NAMESPACE__ . '\algolia_reindex' );
+}
+
+/**
  * Add required attributes to Gravity Forms fields to enable native validation
  */
 add_filter( 'gform_field_content', __NAMESPACE__ . '\add_custom_attr', 10, 5 );

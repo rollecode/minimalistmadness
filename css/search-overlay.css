@@ -19,7 +19,6 @@ button.search-trigger:focus {
   opacity: 0;
   position: fixed;
   top: -100vh;
-  transition: all 0.18s;
   width: 100%;
 }
 .overlay.overlay-open {
@@ -418,14 +417,7 @@ ul.search-results ul {
   margin: 0;
   padding: 0;
 }
-ul.search-results a,
-ul.search-results h2,
-ul.search-results div {
-  transition: 200ms all;
-}
 ul.search-results li {
-  /* stylelint-disable-next-line */
-  animation: fadeIn 0.2s ease-in both;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   margin: 0 auto;
   max-width: 90rem;
@@ -443,78 +435,6 @@ ul.search-results li:hover div {
   color: var(--color-alt);
   opacity: 0.7;
 }
-ul.search-results li:nth-child(2) {
-  animation-delay: 0.2s;
-}
-ul.search-results li:nth-child(3) {
-  animation-delay: 0.4s;
-}
-ul.search-results li:nth-child(4) {
-  animation-delay: 0.6s;
-}
-ul.search-results li:nth-child(5) {
-  animation-delay: 0.8s;
-}
-ul.search-results li:nth-child(6) {
-  animation-delay: 1s;
-}
-ul.search-results li:nth-child(7) {
-  animation-delay: 1.2s;
-}
-ul.search-results li:nth-child(8) {
-  animation-delay: 1.4s;
-}
-ul.search-results li:nth-child(9) {
-  animation-delay: 1.6s;
-}
-ul.search-results li:nth-child(10) {
-  animation-delay: 1.8s;
-}
-ul.search-results li:nth-child(11) {
-  animation-delay: 2s;
-}
-ul.search-results li:nth-child(12) {
-  animation-delay: 2.2s;
-}
-ul.search-results li:nth-child(13) {
-  animation-delay: 2.4s;
-}
-ul.search-results li:nth-child(14) {
-  animation-delay: 2.6s;
-}
-ul.search-results li:nth-child(15) {
-  animation-delay: 2.8s;
-}
-ul.search-results li:nth-child(16) {
-  animation-delay: 3s;
-}
-ul.search-results li:nth-child(17) {
-  animation-delay: 3.2s;
-}
-ul.search-results li:nth-child(18) {
-  animation-delay: 3.4s;
-}
-ul.search-results li:nth-child(19) {
-  animation-delay: 3.6s;
-}
-ul.search-results li:nth-child(20) {
-  animation-delay: 3.8s;
-}
-ul.search-results li:nth-child(21) {
-  animation-delay: 4s;
-}
-ul.search-results li:nth-child(22) {
-  animation-delay: 4.2s;
-}
-ul.search-results li:nth-child(23) {
-  animation-delay: 4.4s;
-}
-ul.search-results li:nth-child(24) {
-  animation-delay: 4.6s;
-}
-ul.search-results li:nth-child(25) {
-  animation-delay: 4.8s;
-}
 
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-cancel-button,
@@ -523,13 +443,3 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -20%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}

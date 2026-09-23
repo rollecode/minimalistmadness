@@ -322,6 +322,12 @@ function enqueue_theme_scripts() {
     'baseurl'         => get_rest_url(),
   ) );
 
+  wp_localize_script( 'scripts', 'algolia', [
+    'appId'     => ALGOLIA_APP_ID,
+    'searchKey' => ALGOLIA_SEARCH_KEY,
+    'index'     => ALGOLIA_INDEX,
+  ] );
+
   if ( is_singular( 'post' ) ) {
     wp_localize_script( 'scripts', 'mostRead', [
       'url' => rest_url( 'rollemaa/v1/read/' . get_the_ID() ),

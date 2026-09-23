@@ -93,9 +93,7 @@ namespace Air_Light;
 
       </div><!-- .container-article -->
 
-      <?php if ( function_exists( 'relevanssi_the_related_posts' ) ) {
-        relevanssi_the_related_posts();
-      } ?>
+      <?php the_related_posts(); ?>
 
       <?php
       // If comments are open or we have at least one comment, load up the comment template.
