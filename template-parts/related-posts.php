@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for relevanssi-related.
+ * Related posts under an article.
  *
  * @package minimalistmadness
  */
