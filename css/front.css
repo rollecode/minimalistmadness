@@ -18,7 +18,7 @@
 
 .load-more-container {
   background: linear-gradient(hsla(0, 0%, 100%, 0), var(--color-white-two));
-  height: 320px;
+  height: 360px;
   margin-top: -280px;
   order: 4;
   pointer-events: none;

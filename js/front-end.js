@@ -261,7 +261,7 @@
     const renderPost = (post) => `<article class="entry post-card post no-animation item-vue" id="post-${post.id}">
       <div class="post-card-content">
         <a href="${post.link}" class="global-link" aria-label="${(post.title.rendered || '').replace(/"/g, '&quot;')}" aria-hidden="true" tabindex="-1"></a>
-        <div class="post-card-image no-bottom-radius"><div class="img"><div class="post-card-details"><div>${post.time_custom || ''}</div><div>${post.reading_time_custom || ''}</div></div><div class="background-image full-image" style="background-image: url('${post.featured_image_custom || ''}')"></div></div></div>
+        <div class="post-card-image no-bottom-radius"><div class="img"><p class="post-card-details">${post.time_custom || ''}<br><span class="time-to-read">${post.reading_time_custom || ''} lukukokemus</span></p><div class="image image-background image-background-layer"><img src="${post.featured_image_custom || ''}" alt="" loading="lazy"></div></div></div>
         <div class="post-card-information">
           <h2 class="post-card-title-large"><a href="${post.link}">${post.title.rendered}</a></h2>
           <p>${post.excerpt || ''}</p>

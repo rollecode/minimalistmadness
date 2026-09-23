@@ -104,12 +104,12 @@ function air_get_featured_image_custom_for_rest_api( $object ) {
     $random_image = '';
 
     foreach ( $query as $attachment ) {
-      $random_image = wp_get_attachment_url( $attachment->ID );
+      $random_image = wp_get_attachment_image_url( $attachment->ID, 'large' );
     }
   }
 
   if ( has_post_thumbnail( $post_id ) ) {
-    $featured_image_url = wp_get_attachment_url( get_post_thumbnail_id( $post_id ) );
+    $featured_image_url = wp_get_attachment_image_url( get_post_thumbnail_id( $post_id ), 'large' );
   } else {
     $featured_image_url = $random_image;
   }
