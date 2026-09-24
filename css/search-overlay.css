@@ -60,6 +60,9 @@ body .overlay-search .search-form {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
 }
 body .overlay-search .search-form .search-icon {
   color: var(--color-black);
