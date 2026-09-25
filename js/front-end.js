@@ -80,7 +80,7 @@
           : `${text}: ${t('external_link')}`);
       }
 
-      if (![ 'no-external-link-indicator', 'global-link', 'button' ].some((cls) => link.classList.contains(cls))) {
+      if (![ 'no-external-link-indicator', 'global-link', 'button' ].some((cls) => link.classList.contains(cls)) && !link.closest('.activitypub-embed, .wp-block-embed')) {
         link.insertAdjacentHTML('beforeend', '<svg class="external-link-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><path d="M4.499 1.497h4v4m0-4l-7 7" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
       }
     });

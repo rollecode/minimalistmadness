@@ -1861,3 +1861,18 @@ p {
   color: var(--color-paragraph);
   line-height: var(--line-height-paragraphs-blog);
 }
+
+/* ActivityPub reply embeds hard-code a white card; follow the theme colors so dark mode stays readable */
+.entry-content .activitypub-embed {
+  background: var(--color-white);
+}
+.entry-content .activitypub-embed,
+.entry-content .activitypub-embed * {
+  border-color: var(--color-border-light);
+}
+.entry-content .activitypub-embed-header-text h2,
+.entry-content .activitypub-embed-content .ap-title,
+.entry-content .activitypub-embed-content .ap-subtitle,
+.entry-content .activitypub-embed-meta strong {
+  color: var(--color-paragraph);
+}
