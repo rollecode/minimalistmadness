@@ -136,3 +136,51 @@ add_filter( 'image_editor_output_format', function ( $formats ) {
     'image/png'  => 'image/webp',
   ];
 } );
+
+/**
+ * A new Fediverse reaction or comment clears the cached pages that show it:
+ * the post, the front page, the first archive pages and the diary date archives.
+ */
+const REACTION_PURGE_ARCHIVE_PAGES = 3;
+
+function purge_on_comment( $comment ) {
+  global $nginx_purger;
+
+  if ( '1' !== (string) $comment->comment_approved || ! is_object( $nginx_purger ) ) {
+    return;
+  }
+
+  $post = get_post( $comment->comment_post_ID );
+  if ( ! $post || 'publish' !== $post->post_status ) {
+    return;
+  }
+
+  $urls    = [ get_permalink( $post ), home_url( '/' ) ];
+  $archive = get_post_type_archive_link( $post->post_type );
+
+  if ( $archive ) {
+    $urls[] = $archive;
+    for ( $page = 2; $page <= REACTION_PURGE_ARCHIVE_PAGES; $page++ ) {
+      $urls[] = trailingslashit( $archive ) . 'page/' . $page . '/';
+    }
+  }
+
+  if ( 'diary' === $post->post_type ) {
+    $urls[] = home_url( 'lokikirja/' . get_the_date( 'Y/m/d/', $post ) );
+    $urls[] = home_url( 'lokikirja/' . get_the_date( 'Y/m/', $post ) );
+  }
+
+  foreach ( array_unique( $urls ) as $url ) {
+    $nginx_purger->purge_url( $url, false );
+  }
+}
+
+add_action( 'wp_insert_comment', function ( $comment_id, $comment ) {
+  purge_on_comment( $comment );
+}, 10, 2 );
+
+add_action( 'transition_comment_status', function ( $new_status, $old_status, $comment ) {
+  if ( 'approved' === $new_status ) {
+    purge_on_comment( $comment );
+  }
+}, 10, 3 );
