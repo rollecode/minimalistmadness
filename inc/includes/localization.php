@@ -2,7 +2,7 @@
 /**
  * @Author: Timi Wahalahti
  * @Date:   2019-12-03 11:03:31
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2021-07-27 12:32:53
  *
  * @package minimalistmadness

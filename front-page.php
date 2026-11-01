@@ -6,7 +6,7 @@
  * Initial styles for front page template.
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2020-04-02 21:47:12
  * @package minimalistmadness
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

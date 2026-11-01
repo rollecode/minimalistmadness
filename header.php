@@ -5,7 +5,7 @@
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-11-01 11:18:20
  * @package minimalistmadness
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

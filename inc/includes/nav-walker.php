@@ -9,7 +9,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2019-12-30 21:58:07
  *
  * @package minimalistmadness

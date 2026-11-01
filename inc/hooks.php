@@ -4,9 +4,9 @@
  *
  * All hooks that are run in the theme are listed here
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2022-09-19 11:07:30
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-11-01 11:21:48
  *
  * @package minimalistmadness

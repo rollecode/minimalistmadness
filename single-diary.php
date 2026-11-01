@@ -4,9 +4,9 @@
  *
  * A template for single post.
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2021-11-16 09:38:48
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2023-01-24 00:01:40
  *
  * @package minimalistmadness

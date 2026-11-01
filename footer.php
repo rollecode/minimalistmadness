@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after.
  *
  * @Date:   2019-10-15 12:30:02
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2020-05-27 20:02:12
  * @package minimalistmadness
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials

@@ -2,9 +2,9 @@
 /**
  * Hero
  *
- * @Author: Roni Laukkarinen
+ * @Author: Rolle Laukkarinen
  * @Date: 2020-02-28 15:38:00
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2021-11-14 01:00:37
  * @package minimalistmadness
  */

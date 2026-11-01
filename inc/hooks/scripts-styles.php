@@ -2,9 +2,9 @@
 /**
  * Enqueue and localize theme scripts and styles
  *
- * @Author: Roni Laukkarinen
+ * @Author: Rolle Laukkarinen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-02-09 11:04:24
  *
  * @package minimalistmadness

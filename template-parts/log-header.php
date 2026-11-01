@@ -4,9 +4,9 @@
  *
  * Short textual info about the log.
  *
- * @Author: Roni Laukkarinen
+ * @Author: Rolle Laukkarinen
  * @Date: 2021-11-25 10:05:52
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-05-28 12:07:15
  *
  * @package minimalistmadness

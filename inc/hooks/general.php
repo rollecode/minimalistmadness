@@ -5,7 +5,7 @@
  * @package minimalistmadness
  * @Author: Niku Hietanen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-11-01 11:29:39
  */
 
@@ -155,7 +155,7 @@ function khonsu_estimated_reading_time() {
  *
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-08-07 14:38:34
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2020-05-12 16:17:30
  *
  * @package air-helper

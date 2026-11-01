@@ -4,9 +4,9 @@
  *
  * The part that displays a post one year from now.
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2021-11-11 12:59:35
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-12-07 19:09:09
  *
  * @package minimalistmadness

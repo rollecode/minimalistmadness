@@ -4,9 +4,9 @@
  *
  * Ads for the middle section of the page
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2021-08-10 09:32:58
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-04-06 16:19:42
  *
  * @package minimalistmadness

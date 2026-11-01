@@ -5,7 +5,7 @@
  * @package minimalistmadness
  * @Author: Niku Hietanen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-05-22 11:32:10
  */
 

@@ -35,7 +35,7 @@ function khonsu_get_random_image_id() {
  *
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-08-07 14:38:34
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2020-04-03 11:45:47
  *
  * @package air-helper

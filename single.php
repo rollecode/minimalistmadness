@@ -4,9 +4,9 @@
  *
  * The template for displaying a single post.
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2022-09-19 11:07:30
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2022-12-09 10:47:53
  *
  * @package minimalistmadness

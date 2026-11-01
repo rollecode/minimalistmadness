@@ -5,9 +5,9 @@
  * Description of the file called
  * content-diary.
  *
- * @Author:		Roni Laukkarinen
+ * @Author:		Rolle Laukkarinen
  * @Date:   		2021-11-11 08:59:06
- * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified by:   Rolle Laukkarinen
  * @Last Modified time: 2021-11-11 12:59:35
  *
  * @package minimalistmadness
