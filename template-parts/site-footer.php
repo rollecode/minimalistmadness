@@ -15,7 +15,7 @@ namespace Air_Light;
         <div class="footer-choices">
           <ul class="social-media">
             <li><a class="no-external-link-indicator" href="https://twitter.com/rolle"><span class="screen-reader-text">Twitter</span><?php include get_theme_file_path( '/svg/twitter.svg' ); ?></a></li>
-            <li><a class="no-external-link-indicator" href="https://github.com/ronilaukkarinen"><span class="screen-reader-text">GitHub</span><?php include get_theme_file_path( '/svg/github.svg' ); ?></a></li>
+            <li><a class="no-external-link-indicator" href="https://github.com/rollecode"><span class="screen-reader-text">GitHub</span><?php include get_theme_file_path( '/svg/github.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://www.instagram.com/rolle_"><span class="screen-reader-text">Twitter</span><?php include get_theme_file_path( '/svg/instagram.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://www.last.fm/user/rolle-"><span class="screen-reader-text">Last.fm</span><?php include get_theme_file_path( '/svg/lastfm.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://untappd.com/user/rolle"><span class="screen-reader-text">Untappd</span><?php include get_theme_file_path( '/svg/untappd.svg' ); ?></a></li>
@@ -23,7 +23,7 @@ namespace Air_Light;
             <li><a class="no-external-link-indicator" href="https://www.overbuff.com/players/pc/Qllervo-2545"><span class="screen-reader-text">Overwatch</span><?php include get_theme_file_path( '/svg/overwatch.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://rawg.io/@rolle"><span class="screen-reader-text">Rawg.io</span><?php include get_theme_file_path( '/svg/rawg.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="http://trakt.tv/users/rolle"><span class="screen-reader-text">Trakt</span><?php include get_theme_file_path( '/svg/trakt.svg' ); ?></a></li>
-            <li><a class="no-external-link-indicator" href="https://keybase.io/ronilaukkarinen"><span class="screen-reader-text">Keybase</span><?php include get_theme_file_path( '/svg/keybase.svg' ); ?></a></li>
+            <li><a class="no-external-link-indicator" href="https://keybase.io/rollecode"><span class="screen-reader-text">Keybase</span><?php include get_theme_file_path( '/svg/keybase.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://profiles.wordpress.org/rolle"><span class="screen-reader-text">WordPress</span><?php include get_theme_file_path( '/svg/wordpress.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://www.linkedin.com/in/rolaukka/"><span class="screen-reader-text">WordPress</span><?php include get_theme_file_path( '/svg/linkedin.svg' ); ?></a></li>
             <li><a class="no-external-link-indicator" href="https://www.strava.com/athletes/16582440"><span class="screen-reader-text">Strava</span><?php include get_theme_file_path( '/svg/strava.svg' ); ?></a></li>
